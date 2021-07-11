@@ -29,26 +29,24 @@ class PowerControl {
     
     func waitForState(states:[UIDevice.BatteryState], _ expectedLevel:Float? = nil, onComplete:@escaping PowerControlOnComplete) {
         if satisfiesCondition(states, expectedLevel) {
-            let state = BatteryMonitor.shared.state
-            let level = BatteryMonitor.shared.level
-            log("fulfill current state: \(state) \(level)")
-            onComplete()
+            completeWaitForState(onComplete)
         } else {
-            log("current state: \(BatteryMonitor.shared.state.string) \(UIDevice.current.batteryState.string)")
+            log("current state: \(BatteryMonitor.shared.state.string) \(BatteryMonitor.shared.level)")
             BatteryMonitor.shared.report = { [weak self] level, state in
-                guard let self = self else {return}
-                if self.satisfiesCondition(states, expectedLevel) {
-                    log("fulfill current state: \(state) \(level)")
-                    onComplete()
-                }
+                self?.completeWaitForState(onComplete)
             };
         }
     }
     
-    func satisfiesCondition(_ states:[UIDevice.BatteryState], _ expectedLevel:Float?) -> Bool {
+    private func satisfiesCondition(_ states:[UIDevice.BatteryState], _ expectedLevel:Float?) -> Bool {
         let state = BatteryMonitor.shared.state
         let level = BatteryMonitor.shared.level
         return states.contains(state) && (expectedLevel == nil || expectedLevel == level)
+    }
+    
+    private func completeWaitForState(_ onComplete:@escaping PowerControlOnComplete) {
+        log("fulfill current state: \(BatteryMonitor.shared.state.string) \(BatteryMonitor.shared.level)")
+        onComplete()
     }
     
     func executeWithTimeout(execute:@escaping (@escaping ()->())->(), onComplete:@escaping ()->(), onRetry:@escaping ()->()) {
@@ -62,7 +60,7 @@ class PowerControl {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + TIMEOUT) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + TIMEOUT) {
             if !completed {
                 dismissed = true
                 onRetry()
@@ -76,7 +74,7 @@ class PowerControl {
         
         executeWithTimeout { [weak self] done in
             self?.handleUnknownState() {
-                log("waiting for charger connection")
+                log("--- waiting for charger connection ---")
                 self?.webHook.startCharging()
                 self?.waitForState(states: [.charging,.full]) {
                     done()
@@ -91,7 +89,7 @@ class PowerControl {
     
     func fullyRecharge(onComplete:@escaping PowerControlOnComplete) {
         connect() { [weak self] in
-            log("waiting for full battery")
+            log("--- waiting for full battery ---")
             self?.waitForState(states: [.full], 1.0) {
                 onComplete()
             }
@@ -100,7 +98,7 @@ class PowerControl {
     
     func disconnect(onComplete:@escaping PowerControlOnComplete) {
         executeWithTimeout { [weak self] done in
-            log("waiting for charger disconnection")
+            log("--- waiting for charger disconnection ---")
             self?.webHook.stopCharging()
             self?.waitForState(states: [.unplugged]) {
                 done()

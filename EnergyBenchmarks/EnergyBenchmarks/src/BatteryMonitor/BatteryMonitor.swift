@@ -25,14 +25,18 @@ class BatteryMonitor {
     
     @objc
     func batteryLevelDidChange(notification: NSNotification) {
-        log("batteryLevelDidChange: \(level)")
+        logBattery()
         report?(level, state)
     }
 
     @objc
     func batteryStateDidChange(notification: NSNotification) {
-        log("batteryStateDidChange: \(state.string)")
+        logBattery()
         report?(level, state)
+    }
+    
+    private func logBattery() {
+        log("batteryDidChange: \(state.string) \(level)")
     }
     
     func startMonitoring() {

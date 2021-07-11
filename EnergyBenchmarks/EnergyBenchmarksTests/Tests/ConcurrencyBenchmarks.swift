@@ -1,5 +1,5 @@
 //
-//  ThreadsTest.swift
+//  ConcurrencyBenchmarks.swift
 //  EnergyBenchmarksTests
 //
 //  Created by Vitor on 22/06/21.

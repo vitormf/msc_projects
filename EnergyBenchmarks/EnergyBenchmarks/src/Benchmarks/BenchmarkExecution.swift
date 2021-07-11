@@ -20,13 +20,12 @@ class BenchmarkExecution {
     }
     
     func shortDelay(_ execute:@escaping BenchmarkExecutorBlock) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
             execute()
         }
     }
     
     private func setup(onComplete:@escaping BenchmarkExecutorBlock) {
-        log("### preparing test: \(benchmark.category) \(benchmark.identifier)")
         BatteryMonitor.shared.startMonitoring()
         
         shortDelay { [weak self] in
@@ -44,6 +43,7 @@ class BenchmarkExecution {
     
     
     func execute(onCompletion:@escaping BenchmarkExecutorBlock) {
+        log("####### preparing test: \(benchmark.category) \(benchmark.identifier)")
         setup { [weak self] in
             self!.powerControl.disconnect {
                 assert(BatteryMonitor.shared.state == .unplugged)
@@ -51,7 +51,9 @@ class BenchmarkExecution {
                 
                 DispatchQueue.global().async {
                     let start = DispatchTime.now()
+                    log("####### executing test: \(self!.benchmark.category) \(self!.benchmark.identifier)")
                     self!.benchmark.execute()
+                    log("####### fininishing test: \(self!.benchmark.category) \(self!.benchmark.identifier)")
                     self!.teardown(start) {
                         onCompletion()
                     }

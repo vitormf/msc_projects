@@ -11,6 +11,9 @@ var printLog = true
 
 func log(_ message:String) {
     if printLog {
-        print(message)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH'h'mm'm'ss's'"
+        let now = formatter.string(from: Date())
+        print("EBLOG[\(now)]: \(message)")
     }
 }

@@ -15,7 +15,7 @@ class BatteryBenchmarkTest: XCTestCase {
         let execution = BenchmarkExecution(benchmark)
         execution.execute {
             expectation.fulfill()
-        }
+        }   
         wait(for: [expectation], timeout: 10800)
     }
     

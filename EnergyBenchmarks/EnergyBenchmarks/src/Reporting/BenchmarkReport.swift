@@ -16,6 +16,7 @@ class BenchmarkReport {
     
     func add(result:BenchmarkResult) {
         results.append(result)
+        print(result:result)
     }
     
     func reset() {
@@ -26,10 +27,14 @@ class BenchmarkReport {
     func report() {
         if !failure {
             for result in results {
-                print("### REPORT Category: \(result.category) - Id: \(result.identifier) - Battery: \(result.battery) - duration: \(result.duration) - system: \(result.system) - model: \(result.model) - name: \(result.name) - cores: \(result.cores) - osVersion: \(result.osVersion)")
+                print(result:result)
             }
         }
         reset()
+    }
+    
+    func print(result:BenchmarkResult) {
+        log("### REPORT Category: \(result.category) - Id: \(result.identifier) - Battery: \(result.battery) - duration: \(result.duration) - system: \(result.system) - model: \(result.model) - name: \(result.name) - cores: \(result.cores) - osVersion: \(result.osVersion)")
     }
     
 }
