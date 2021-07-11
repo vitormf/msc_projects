@@ -5,7 +5,7 @@
 //  Created by Vitor on 20/06/21.
 //
 
-import Foundation
+import UIKit
 
 class SmartSwitchWebhook {
     enum WebHookCommand : String {

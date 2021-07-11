@@ -8,44 +8,14 @@
 import XCTest
 @testable import EnergyBenchmarks
 
-class ArrayTests: EnergyTest {
+class ArrayTests: BatteryBenchmarkTest {
     
-    override class func setUp() {
-        EnergyMonitor.shared.startMonitoring()
+    func testArrayAppend() {
+        execute(benchmark: SwiftArrayAppend())
     }
     
-    
-    let ADD_GOAL = 1_000_000_000
-    
-    func printProgress(_ i:Int) {
-        print("\(Double(i)/Double(self.ADD_GOAL)*100)%")
+    func testOperationQueue2() {
+        execute(benchmark: NSMutableArrayAdd())
     }
-    
-    func testAddSwiftArray() {
-        executeTest("ArrayTests:Array.append()") {
-            var array = [Int]()
-            for i in 0...self.ADD_GOAL {
-                array.append(i)
-                if i % 1_000_000 == 0 {
-                    array = [Int]()
-                    self.printProgress(i)
-                }
-            }
-        }
-    }
-    
-    func testAddNSMutableArray() {
-        executeTest("ArrayTests:NSMutableArray.add()") {
-            var array = NSMutableArray()
-            for i in 0...self.ADD_GOAL {
-                array.add(i)
-                if i % 1_000_000 == 0 {
-                    array = NSMutableArray()
-                    self.printProgress(i)
-                }
-            }
-        }
-    }
-    
     
 }

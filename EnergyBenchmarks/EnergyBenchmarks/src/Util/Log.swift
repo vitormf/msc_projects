@@ -1,5 +1,5 @@
 //
-//  EnergyTestDebug.swift
+//  Log.swift
 //  EnergyBenchmarksTests
 //
 //  Created by Vitor on 22/06/21.
@@ -7,11 +7,10 @@
 
 import Foundation
 
-var energyTestDebug = true
+var printLog = true
 
-
-func etdebug(_ message:String) {
-    if energyTestDebug {
+func log(_ message:String) {
+    if printLog {
         print(message)
     }
 }
