@@ -9,32 +9,34 @@ import Foundation
 
 class BenchmarkReport {
     
-    static let shared = BenchmarkReport()
+    private static let instance = BenchmarkReport()
     
     var results = [BenchmarkResult]()
     var failure = false
     
-    func add(result:BenchmarkResult) {
-        results.append(result)
+    static func add(result:BenchmarkResult) {
+        instance.results.append(result)
         print(result:result)
+        ReportService.report(result: result)
     }
     
-    func reset() {
-        results.removeAll()
-        failure = false
+    static func reset() {
+        instance.results.removeAll()
+        instance.failure = false
     }
     
-    func report() {
-        if !failure {
-            for result in results {
+    static func report() {
+        if !instance.failure {
+            eblog?("TEST REPORT:")
+            for result in instance.results {
                 print(result:result)
             }
         }
         reset()
     }
     
-    func print(result:BenchmarkResult) {
-        log("### REPORT Category: \(result.category) - Id: \(result.identifier) - Battery: \(result.battery) - duration: \(result.duration) - system: \(result.system) - model: \(result.model) - name: \(result.name) - cores: \(result.cores) - osVersion: \(result.osVersion)")
+    static func print(result:BenchmarkResult) {
+        eblog?("### REPORT Category: \(result.category) - Id: \(result.identifier) - Battery: \(result.battery) - duration: \(result.duration) - os: \(result.os) - model: \(result.model) - name: \(result.name) - cores: \(result.cores) - osVersion: \(result.osVersion) - info: \(result.info)")
     }
     
 }

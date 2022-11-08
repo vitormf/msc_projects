@@ -7,7 +7,8 @@
 
 import Foundation
 
-typealias BenchmarkExecutorBlock = ()->()
+typealias BenchmarkExecutorEmptyBlock = ()->()
+typealias BenchmarkExecutorResultBlock = (Benchmark, BenchmarkResult)->()
 
 class BenchmarkExecution {
     
@@ -19,13 +20,14 @@ class BenchmarkExecution {
         self.benchmark = benchmark
     }
     
-    func shortDelay(_ execute:@escaping BenchmarkExecutorBlock) {
+    func shortDelay(_ execute:@escaping BenchmarkExecutorEmptyBlock) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
             execute()
         }
     }
     
-    private func setup(onComplete:@escaping BenchmarkExecutorBlock) {
+    private func setup(onComplete:@escaping BenchmarkExecutorEmptyBlock) {
+        powerControl.reduceBrightness()
         BatteryMonitor.shared.startMonitoring()
         
         shortDelay { [weak self] in
@@ -33,8 +35,8 @@ class BenchmarkExecution {
             // and disconnected before each test
             self?.powerControl.connect {
                 self?.powerControl.fullyRecharge {
-                    assert(BatteryMonitor.shared.state == .full)
-                    assert(BatteryMonitor.shared.level == 1.0)
+//                    assert(BatteryMonitor.shared.state == .full)
+//                    assert(BatteryMonitor.shared.level == 1.0)
                     onComplete()
                 }
             }
@@ -42,20 +44,20 @@ class BenchmarkExecution {
     }
     
     
-    func execute(onCompletion:@escaping BenchmarkExecutorBlock) {
-        log("####### preparing test: \(benchmark.category) \(benchmark.identifier)")
+    func execute(onCompletion:@escaping BenchmarkExecutorResultBlock) {
+        eblog?("####### PREPARING BENCHMARK: \(benchmark.category) \(benchmark.identifier)")
         setup { [weak self] in
             self!.powerControl.disconnect {
-                assert(BatteryMonitor.shared.state == .unplugged)
-                assert(BatteryMonitor.shared.level == 1.0)
+//                assert(BatteryMonitor.shared.state == .unplugged)
+//                assert(BatteryMonitor.shared.level == 1.0)
                 
                 DispatchQueue.global().async {
                     let start = DispatchTime.now()
-                    log("####### executing test: \(self!.benchmark.category) \(self!.benchmark.identifier)")
+                    eblog?("####### EXECUTING BENCHMARK: \(self!.benchmark.category) \(self!.benchmark.identifier)")
                     self!.benchmark.execute()
-                    log("####### fininishing test: \(self!.benchmark.category) \(self!.benchmark.identifier)")
-                    self!.teardown(start) {
-                        onCompletion()
+                    eblog?("####### FINISHING BENCHMARK: \(self!.benchmark.category) \(self!.benchmark.identifier)")
+                    self!.teardown(start) { benchmark,result in
+                        onCompletion(benchmark,result)
                     }
                 };
             }
@@ -63,26 +65,28 @@ class BenchmarkExecution {
         
     }
     
-    private func teardown(_ start:DispatchTime, onCompletion:@escaping BenchmarkExecutorBlock) {
+    private func teardown(_ start:DispatchTime, onCompletion:@escaping BenchmarkExecutorResultBlock) {
         let battery = 1.0 - BatteryMonitor.shared.level
         let end = DispatchTime.now()
         let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
         let timeInterval = Double(nanoTime) / 1_000_000_000
         
+//        assert(BatteryMonitor.shared.state == .unplugged)
         self.benchmark.validate()
         
         
-        BenchmarkReport.shared.add(result: BenchmarkResult(
+        let result = BenchmarkResult(
             category: self.benchmark.category,
             identifier: self.benchmark.identifier,
-            battery:battery,
+            info: self.benchmark.info,
+            battery:UInt(round(battery*100)),
             duration: timeInterval
-        ))
+        )
         
         self.powerControl.connect { [weak self] in
             BatteryMonitor.shared.stopMonitoring()
             self!.shortDelay {
-                onCompletion()
+                onCompletion(self!.benchmark,result)
             }
         }
     }

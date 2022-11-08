@@ -36,11 +36,11 @@ class BatteryMonitor {
     }
     
     private func logBattery() {
-        log("batteryDidChange: \(state.string) \(level)")
+        eblog?("batteryDidChange: \(state.string) \(level)")
     }
     
     func startMonitoring() {
-        log("BatteryMonitor.startMonitoring)")
+        eblog?("BatteryMonitor.startMonitoring)")
         UIDevice.current.isBatteryMonitoringEnabled = true
         NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelDidChange(notification:)), name: UIDevice.batteryLevelDidChangeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(batteryStateDidChange(notification:)), name: UIDevice.batteryStateDidChangeNotification, object: nil)
@@ -48,7 +48,7 @@ class BatteryMonitor {
     }
     
     func stopMonitoring() {
-        log("BatteryMonitor.stopMonitoring")
+        eblog?("BatteryMonitor.stopMonitoring")
         NotificationCenter.default.removeObserver(self)
         NotificationCenter.default.removeObserver(self)
         UIDevice.current.isBatteryMonitoringEnabled = false

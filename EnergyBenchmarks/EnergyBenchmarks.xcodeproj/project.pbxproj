@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E15B227269E200B001BAB5A /* BenchmarkExecutionSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B226269E200B001BAB5A /* BenchmarkExecutionSuite.swift */; };
+		4E15B22C269F308F001BAB5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E15B22B269F308F001BAB5A /* GoogleService-Info.plist */; };
+		4E15B22E269F31E5001BAB5A /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B22D269F31E5001BAB5A /* ReportService.swift */; };
+		4E15B230269F3A9B001BAB5A /* BenchmarksSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B22F269F3A9B001BAB5A /* BenchmarksSelectionViewController.swift */; };
+		4E15B23F269F51FC001BAB5A /* BenchmarkExecutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B23E269F51FC001BAB5A /* BenchmarkExecutionViewController.swift */; };
+		4E15B241269F58FB001BAB5A /* IntFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B240269F58FB001BAB5A /* IntFormatter.swift */; };
+		4E15B243269F6E40001BAB5A /* ResultsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B242269F6E40001BAB5A /* ResultsSelectionViewController.swift */; };
+		4E15B24A269F80A8001BAB5A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B249269F80A8001BAB5A /* ResultsViewController.swift */; };
+		4E15B24D269F88E8001BAB5A /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B24C269F88E8001BAB5A /* Statistics.swift */; };
+		4E15B25726A08668001BAB5A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4E15B25626A08668001BAB5A /* FirebaseAuth */; };
+		4E15B25926A08668001BAB5A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E15B25826A08668001BAB5A /* FirebaseDatabase */; };
+		4E15B26126A0C4AE001BAB5A /* ArrayAddLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26026A0C4AE001BAB5A /* ArrayAddLast.swift */; };
+		4E15B26326A0C58E001BAB5A /* ArrayAddFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26226A0C58E001BAB5A /* ArrayAddFirst.swift */; };
+		4E15B26526A0C623001BAB5A /* ArrayRemoveLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26426A0C623001BAB5A /* ArrayRemoveLast.swift */; };
+		4E15B26726A0C630001BAB5A /* ArrayRemoveFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26626A0C630001BAB5A /* ArrayRemoveFirst.swift */; };
+		4E15B26A26A0DD00001BAB5A /* SleepBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26926A0DD00001BAB5A /* SleepBenchmark.swift */; };
+		4E15B26C26A1C367001BAB5A /* SleepTrackingBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26B26A1C367001BAB5A /* SleepTrackingBenchmark.swift */; };
 		4E2F56AD267E3685000ACBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56AC267E3685000ACBF7 /* AppDelegate.swift */; };
 		4E2F56AF267E3685000ACBF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56AE267E3685000ACBF7 /* SceneDelegate.swift */; };
 		4E2F56B1267E3685000ACBF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56B0267E3685000ACBF7 /* ViewController.swift */; };
 		4E2F56B4267E3685000ACBF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2F56B2267E3685000ACBF7 /* Main.storyboard */; };
 		4E2F56B6267E3687000ACBF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2F56B5267E3687000ACBF7 /* Assets.xcassets */; };
 		4E2F56B9267E3687000ACBF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2F56B7267E3687000ACBF7 /* LaunchScreen.storyboard */; };
-		4E2F56C4267E3687000ACBF7 /* BatteryBenchmarkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56C3267E3687000ACBF7 /* BatteryBenchmarkTest.swift */; };
 		4E2F56CF267E3687000ACBF7 /* EnergyBenchmarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56CE267E3687000ACBF7 /* EnergyBenchmarksUITests.swift */; };
+		4E63625426BF16B60086239F /* IntUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63625326BF16B60086239F /* IntUtils.swift */; };
 		4E7824382699EBE9000A1ED4 /* PowerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7824372699EBE9000A1ED4 /* PowerControl.swift */; };
 		4E7824392699EC52000A1ED4 /* SmartSwitchWebhook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB09F92680C73300158260 /* SmartSwitchWebhook.swift */; };
 		4E78243A2699EC56000A1ED4 /* BatteryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB09F72680C69A00158260 /* BatteryMonitor.swift */; };
@@ -28,12 +45,9 @@
 		4E782449269A1AD9000A1ED4 /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E782448269A1AD9000A1ED4 /* Benchmark.swift */; };
 		4E78244B269A2133000A1ED4 /* ConcurrencyOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78244A269A2133000A1ED4 /* ConcurrencyOperationQueue.swift */; };
 		4E78244D269A23D6000A1ED4 /* BenchmarkExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78244C269A23D6000A1ED4 /* BenchmarkExecution.swift */; };
-		4ECB0A002680D57800158260 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB09FF2680D57800158260 /* ArrayTests.swift */; };
-		4ECB0A0426821DD900158260 /* ConcurrencyBenchmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB0A0326821DD900158260 /* ConcurrencyBenchmarks.swift */; };
+		4ECB0A0426821DD900158260 /* EnergyBenchmarksAsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB0A0326821DD900158260 /* EnergyBenchmarksAsTests.swift */; };
 		4EE82920269B22A100D88A0F /* BenchmarkReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8291F269B22A100D88A0F /* BenchmarkReport.swift */; };
 		4EE82923269B2A8C00D88A0F /* ArrayBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE82922269B2A8C00D88A0F /* ArrayBenchmark.swift */; };
-		4EE82925269B2B4E00D88A0F /* SwiftArrayAppend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE82924269B2B4E00D88A0F /* SwiftArrayAppend.swift */; };
-		4EE82927269B2BD700D88A0F /* NSMutableArrayAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE82926269B2BD700D88A0F /* NSMutableArrayAdd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +68,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E15B226269E200B001BAB5A /* BenchmarkExecutionSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkExecutionSuite.swift; sourceTree = "<group>"; };
+		4E15B22B269F308F001BAB5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4E15B22D269F31E5001BAB5A /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
+		4E15B22F269F3A9B001BAB5A /* BenchmarksSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarksSelectionViewController.swift; sourceTree = "<group>"; };
+		4E15B23E269F51FC001BAB5A /* BenchmarkExecutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkExecutionViewController.swift; sourceTree = "<group>"; };
+		4E15B240269F58FB001BAB5A /* IntFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFormatter.swift; sourceTree = "<group>"; };
+		4E15B242269F6E40001BAB5A /* ResultsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsSelectionViewController.swift; sourceTree = "<group>"; };
+		4E15B249269F80A8001BAB5A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		4E15B24C269F88E8001BAB5A /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		4E15B26026A0C4AE001BAB5A /* ArrayAddLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAddLast.swift; sourceTree = "<group>"; };
+		4E15B26226A0C58E001BAB5A /* ArrayAddFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAddFirst.swift; sourceTree = "<group>"; };
+		4E15B26426A0C623001BAB5A /* ArrayRemoveLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRemoveLast.swift; sourceTree = "<group>"; };
+		4E15B26626A0C630001BAB5A /* ArrayRemoveFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRemoveFirst.swift; sourceTree = "<group>"; };
+		4E15B26926A0DD00001BAB5A /* SleepBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepBenchmark.swift; sourceTree = "<group>"; };
+		4E15B26B26A1C367001BAB5A /* SleepTrackingBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTrackingBenchmark.swift; sourceTree = "<group>"; };
 		4E2F56A9267E3685000ACBF7 /* EnergyBenchmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyBenchmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2F56AC267E3685000ACBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E2F56AE267E3685000ACBF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,11 +92,11 @@
 		4E2F56B8267E3687000ACBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E2F56BA267E3687000ACBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E2F56BF267E3687000ACBF7 /* EnergyBenchmarksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyBenchmarksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E2F56C3267E3687000ACBF7 /* BatteryBenchmarkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryBenchmarkTest.swift; sourceTree = "<group>"; };
 		4E2F56C5267E3687000ACBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E2F56CA267E3687000ACBF7 /* EnergyBenchmarksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyBenchmarksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2F56CE267E3687000ACBF7 /* EnergyBenchmarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBenchmarksUITests.swift; sourceTree = "<group>"; };
 		4E2F56D0267E3687000ACBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E63625326BF16B60086239F /* IntUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntUtils.swift; sourceTree = "<group>"; };
 		4E7824372699EBE9000A1ED4 /* PowerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerControl.swift; sourceTree = "<group>"; };
 		4E782444269A1A49000A1ED4 /* ConcurrencyBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyBenchmark.swift; sourceTree = "<group>"; };
 		4E782446269A1A8F000A1ED4 /* ConcurrencySequential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencySequential.swift; sourceTree = "<group>"; };
@@ -77,15 +106,12 @@
 		4ECB09F72680C69A00158260 /* BatteryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryMonitor.swift; sourceTree = "<group>"; };
 		4ECB09F92680C73300158260 /* SmartSwitchWebhook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSwitchWebhook.swift; sourceTree = "<group>"; };
 		4ECB09FB2680CAC400158260 /* BatteryState+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryState+Extension.swift"; sourceTree = "<group>"; };
-		4ECB09FF2680D57800158260 /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		4ECB0A012682153B00158260 /* BenchmarkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkResult.swift; sourceTree = "<group>"; };
-		4ECB0A0326821DD900158260 /* ConcurrencyBenchmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyBenchmarks.swift; sourceTree = "<group>"; };
+		4ECB0A0326821DD900158260 /* EnergyBenchmarksAsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBenchmarksAsTests.swift; sourceTree = "<group>"; };
 		4ECB0A052682215000158260 /* UIDevice+modelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+modelName.swift"; sourceTree = "<group>"; };
 		4ECB0A0726822CA500158260 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4EE8291F269B22A100D88A0F /* BenchmarkReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkReport.swift; sourceTree = "<group>"; };
 		4EE82922269B2A8C00D88A0F /* ArrayBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayBenchmark.swift; sourceTree = "<group>"; };
-		4EE82924269B2B4E00D88A0F /* SwiftArrayAppend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftArrayAppend.swift; sourceTree = "<group>"; };
-		4EE82926269B2BD700D88A0F /* NSMutableArrayAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableArrayAdd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E15B25926A08668001BAB5A /* FirebaseDatabase in Frameworks */,
 				4E782441269A0C3A000A1ED4 /* DeviceKit in Frameworks */,
+				4E15B25726A08668001BAB5A /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +142,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E15B23D269F51D2001BAB5A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4E15B244269F6E44001BAB5A /* Benchmarks */,
+				4E15B245269F6E56001BAB5A /* Results */,
+				4E2F56B0267E3685000ACBF7 /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4E15B244269F6E44001BAB5A /* Benchmarks */ = {
+			isa = PBXGroup;
+			children = (
+				4E15B22F269F3A9B001BAB5A /* BenchmarksSelectionViewController.swift */,
+				4E15B23E269F51FC001BAB5A /* BenchmarkExecutionViewController.swift */,
+			);
+			path = Benchmarks;
+			sourceTree = "<group>";
+		};
+		4E15B245269F6E56001BAB5A /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4E15B242269F6E40001BAB5A /* ResultsSelectionViewController.swift */,
+				4E15B249269F80A8001BAB5A /* ResultsViewController.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		4E15B24B269F88CF001BAB5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E15B24C269F88E8001BAB5A /* Statistics.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E15B26826A0DCF1001BAB5A /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				4E15B26926A0DD00001BAB5A /* SleepBenchmark.swift */,
+				4E15B26B26A1C367001BAB5A /* SleepTrackingBenchmark.swift */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
 		4E2F56A0267E3685000ACBF7 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +210,7 @@
 		4E2F56AB267E3685000ACBF7 /* EnergyBenchmarks */ = {
 			isa = PBXGroup;
 			children = (
+				4E15B23D269F51D2001BAB5A /* UI */,
 				4E7824362699E9CD000A1ED4 /* src */,
 				4E2F56AC267E3685000ACBF7 /* AppDelegate.swift */,
 				4E2F56B5267E3687000ACBF7 /* Assets.xcassets */,
@@ -144,7 +218,7 @@
 				4E2F56B7267E3687000ACBF7 /* LaunchScreen.storyboard */,
 				4E2F56B2267E3685000ACBF7 /* Main.storyboard */,
 				4E2F56AE267E3685000ACBF7 /* SceneDelegate.swift */,
-				4E2F56B0267E3685000ACBF7 /* ViewController.swift */,
+				4E15B22B269F308F001BAB5A /* GoogleService-Info.plist */,
 			);
 			path = EnergyBenchmarks;
 			sourceTree = "<group>";
@@ -153,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				4ECB09FE2680D55500158260 /* Tests */,
-				4ECB09FD2680D54300158260 /* Base Classes */,
 				4E2F56C5267E3687000ACBF7 /* Info.plist */,
 			);
 			path = EnergyBenchmarksTests;
@@ -166,6 +239,16 @@
 				4E2F56D0267E3687000ACBF7 /* Info.plist */,
 			);
 			path = EnergyBenchmarksUITests;
+			sourceTree = "<group>";
+		};
+		4E38E690269DF11500404167 /* BenchmarkExecution */ = {
+			isa = PBXGroup;
+			children = (
+				4E782448269A1AD9000A1ED4 /* Benchmark.swift */,
+				4E78244C269A23D6000A1ED4 /* BenchmarkExecution.swift */,
+				4E15B226269E200B001BAB5A /* BenchmarkExecutionSuite.swift */,
+			);
+			path = BenchmarkExecution;
 			sourceTree = "<group>";
 		};
 		4E7824322699E883000A1ED4 /* BatteryMonitor */ = {
@@ -192,6 +275,8 @@
 				4ECB0A052682215000158260 /* UIDevice+modelName.swift */,
 				4ECB0A012682153B00158260 /* BenchmarkResult.swift */,
 				4EE8291F269B22A100D88A0F /* BenchmarkReport.swift */,
+				4E15B22D269F31E5001BAB5A /* ReportService.swift */,
+				4E15B240269F58FB001BAB5A /* IntFormatter.swift */,
 			);
 			path = Reporting;
 			sourceTree = "<group>";
@@ -200,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				4ECB0A0726822CA500158260 /* Log.swift */,
+				4E63625326BF16B60086239F /* IntUtils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -207,6 +293,8 @@
 		4E7824362699E9CD000A1ED4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4E15B24B269F88CF001BAB5A /* Extensions */,
+				4E38E690269DF11500404167 /* BenchmarkExecution */,
 				4E782442269A19D8000A1ED4 /* Benchmarks */,
 				4E7824322699E883000A1ED4 /* BatteryMonitor */,
 				4E7824332699E986000A1ED4 /* PowerControl */,
@@ -219,10 +307,9 @@
 		4E782442269A19D8000A1ED4 /* Benchmarks */ = {
 			isa = PBXGroup;
 			children = (
+				4E15B26826A0DCF1001BAB5A /* Sleep */,
 				4EE82921269B2A3200D88A0F /* Arrays */,
 				4E782443269A19E9000A1ED4 /* Concurrency */,
-				4E782448269A1AD9000A1ED4 /* Benchmark.swift */,
-				4E78244C269A23D6000A1ED4 /* BenchmarkExecution.swift */,
 			);
 			path = Benchmarks;
 			sourceTree = "<group>";
@@ -237,19 +324,10 @@
 			path = Concurrency;
 			sourceTree = "<group>";
 		};
-		4ECB09FD2680D54300158260 /* Base Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4E2F56C3267E3687000ACBF7 /* BatteryBenchmarkTest.swift */,
-			);
-			path = "Base Classes";
-			sourceTree = "<group>";
-		};
 		4ECB09FE2680D55500158260 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4ECB09FF2680D57800158260 /* ArrayTests.swift */,
-				4ECB0A0326821DD900158260 /* ConcurrencyBenchmarks.swift */,
+				4ECB0A0326821DD900158260 /* EnergyBenchmarksAsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -258,8 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				4EE82922269B2A8C00D88A0F /* ArrayBenchmark.swift */,
-				4EE82924269B2B4E00D88A0F /* SwiftArrayAppend.swift */,
-				4EE82926269B2BD700D88A0F /* NSMutableArrayAdd.swift */,
+				4E15B26026A0C4AE001BAB5A /* ArrayAddLast.swift */,
+				4E15B26226A0C58E001BAB5A /* ArrayAddFirst.swift */,
+				4E15B26426A0C623001BAB5A /* ArrayRemoveLast.swift */,
+				4E15B26626A0C630001BAB5A /* ArrayRemoveFirst.swift */,
 			);
 			path = Arrays;
 			sourceTree = "<group>";
@@ -282,6 +362,8 @@
 			name = EnergyBenchmarks;
 			packageProductDependencies = (
 				4E782440269A0C3A000A1ED4 /* DeviceKit */,
+				4E15B25626A08668001BAB5A /* FirebaseAuth */,
+				4E15B25826A08668001BAB5A /* FirebaseDatabase */,
 			);
 			productName = EnergyBenchmarks;
 			productReference = 4E2F56A9267E3685000ACBF7 /* EnergyBenchmarks.app */;
@@ -356,6 +438,7 @@
 			mainGroup = 4E2F56A0267E3685000ACBF7;
 			packageReferences = (
 				4E78243F269A0C3A000A1ED4 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 4E2F56AA267E3685000ACBF7 /* Products */;
 			projectDirPath = "";
@@ -374,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E2F56B9267E3687000ACBF7 /* LaunchScreen.storyboard in Resources */,
+				4E15B22C269F308F001BAB5A /* GoogleService-Info.plist in Resources */,
 				4E2F56B6267E3687000ACBF7 /* Assets.xcassets in Resources */,
 				4E2F56B4267E3685000ACBF7 /* Main.storyboard in Resources */,
 			);
@@ -400,25 +484,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E15B230269F3A9B001BAB5A /* BenchmarksSelectionViewController.swift in Sources */,
 				4EE82923269B2A8C00D88A0F /* ArrayBenchmark.swift in Sources */,
+				4E15B26126A0C4AE001BAB5A /* ArrayAddLast.swift in Sources */,
+				4E15B26326A0C58E001BAB5A /* ArrayAddFirst.swift in Sources */,
+				4E15B26C26A1C367001BAB5A /* SleepTrackingBenchmark.swift in Sources */,
+				4E63625426BF16B60086239F /* IntUtils.swift in Sources */,
 				4E2F56B1267E3685000ACBF7 /* ViewController.swift in Sources */,
 				4E78244B269A2133000A1ED4 /* ConcurrencyOperationQueue.swift in Sources */,
-				4EE82925269B2B4E00D88A0F /* SwiftArrayAppend.swift in Sources */,
+				4E15B241269F58FB001BAB5A /* IntFormatter.swift in Sources */,
+				4E15B24A269F80A8001BAB5A /* ResultsViewController.swift in Sources */,
 				4E2F56AD267E3685000ACBF7 /* AppDelegate.swift in Sources */,
 				4E78243E2699EC67000A1ED4 /* Log.swift in Sources */,
 				4E782445269A1A49000A1ED4 /* ConcurrencyBenchmark.swift in Sources */,
 				4E782449269A1AD9000A1ED4 /* Benchmark.swift in Sources */,
+				4E15B24D269F88E8001BAB5A /* Statistics.swift in Sources */,
 				4E78243D2699EC63000A1ED4 /* BenchmarkResult.swift in Sources */,
-				4EE82927269B2BD700D88A0F /* NSMutableArrayAdd.swift in Sources */,
+				4E15B227269E200B001BAB5A /* BenchmarkExecutionSuite.swift in Sources */,
+				4E15B26526A0C623001BAB5A /* ArrayRemoveLast.swift in Sources */,
 				4EE82920269B22A100D88A0F /* BenchmarkReport.swift in Sources */,
+				4E15B26726A0C630001BAB5A /* ArrayRemoveFirst.swift in Sources */,
 				4E78244D269A23D6000A1ED4 /* BenchmarkExecution.swift in Sources */,
 				4E78243A2699EC56000A1ED4 /* BatteryMonitor.swift in Sources */,
 				4E2F56AF267E3685000ACBF7 /* SceneDelegate.swift in Sources */,
+				4E15B22E269F31E5001BAB5A /* ReportService.swift in Sources */,
 				4E78243B2699EC5A000A1ED4 /* BatteryState+Extension.swift in Sources */,
 				4E782447269A1A8F000A1ED4 /* ConcurrencySequential.swift in Sources */,
+				4E15B23F269F51FC001BAB5A /* BenchmarkExecutionViewController.swift in Sources */,
 				4E7824392699EC52000A1ED4 /* SmartSwitchWebhook.swift in Sources */,
 				4E78243C2699EC5F000A1ED4 /* UIDevice+modelName.swift in Sources */,
+				4E15B243269F6E40001BAB5A /* ResultsSelectionViewController.swift in Sources */,
 				4E7824382699EBE9000A1ED4 /* PowerControl.swift in Sources */,
+				4E15B26A26A0DD00001BAB5A /* SleepBenchmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,9 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECB0A002680D57800158260 /* ArrayTests.swift in Sources */,
-				4E2F56C4267E3687000ACBF7 /* BatteryBenchmarkTest.swift in Sources */,
-				4ECB0A0426821DD900158260 /* ConcurrencyBenchmarks.swift in Sources */,
+				4ECB0A0426821DD900158260 /* EnergyBenchmarksAsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +848,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.1;
+			};
+		};
 		4E78243F269A0C3A000A1ED4 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/DeviceKit";
@@ -764,6 +867,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4E15B25626A08668001BAB5A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4E15B25826A08668001BAB5A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		4E782440269A0C3A000A1ED4 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4E78243F269A0C3A000A1ED4 /* XCRemoteSwiftPackageReference "DeviceKit" */;

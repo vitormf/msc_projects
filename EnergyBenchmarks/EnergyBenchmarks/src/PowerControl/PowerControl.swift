@@ -15,6 +15,12 @@ class PowerControl {
     
     let webHook = SmartSwitchWebhook()
     
+    func reduceBrightness() {
+        DispatchQueue.main.async {
+            UIScreen.main.brightness = 0
+        }
+    }
+    
     func handleUnknownState(onComplete:@escaping PowerControlOnComplete) {
         if BatteryMonitor.shared.state == .unknown {
             disconnect() { [weak self] in
@@ -31,9 +37,13 @@ class PowerControl {
         if satisfiesCondition(states, expectedLevel) {
             completeWaitForState(onComplete)
         } else {
-            log("current state: \(BatteryMonitor.shared.state.string) \(BatteryMonitor.shared.level)")
+//            eblog(level:.Info, "current state: \(BatteryMonitor.shared.state.string) \(BatteryMonitor.shared.level)")
             BatteryMonitor.shared.report = { [weak self] level, state in
-                self?.completeWaitForState(onComplete)
+                guard let self = self else {return}
+                if self.satisfiesCondition(states, expectedLevel) {
+                    self.completeWaitForState(onComplete)
+                    BatteryMonitor.shared.report = nil
+                }
             };
         }
     }
@@ -45,51 +55,52 @@ class PowerControl {
     }
     
     private func completeWaitForState(_ onComplete:@escaping PowerControlOnComplete) {
-        log("fulfill current state: \(BatteryMonitor.shared.state.string) \(BatteryMonitor.shared.level)")
+        eblog?("fulfill current state: \(BatteryMonitor.shared.state.string) \(BatteryMonitor.shared.level)")
         onComplete()
     }
     
     func executeWithTimeout(execute:@escaping (@escaping ()->())->(), onComplete:@escaping ()->(), onRetry:@escaping ()->()) {
-        var completed = false
-        var dismissed = false
-        
-        execute {
-            if !dismissed {
-                completed = true
-                onComplete()
-            }
-        }
-        
-        DispatchQueue.global().asyncAfter(deadline: .now() + TIMEOUT) {
-            if !completed {
-                dismissed = true
+        DispatchQueue.main.async { [weak self] in
+//            eblog(level:.Info, "executeWithTimeout start")
+            var timer:Timer?
+            timer = Timer.scheduledTimer(withTimeInterval: self!.TIMEOUT, repeats: false) { _ in
+//                eblog(level:.Info, "executeWithTimeout retry")
+                timer = nil
                 onRetry()
             }
+            
+            
+            DispatchQueue.global().async {
+                execute {
+                    guard let timer = timer else {return}
+//                    eblog(level:.Info, "executeWithTimeout finish")
+                    timer.invalidate()
+                    onComplete()
+                }
+
+            }
         }
-        
     }
     
     
     func connect(onComplete:@escaping PowerControlOnComplete) {
         
-        executeWithTimeout { [weak self] done in
-            self?.handleUnknownState() {
-                log("--- waiting for charger connection ---")
-                self?.webHook.startCharging()
-                self?.waitForState(states: [.charging,.full]) {
-                    done()
-                }
+        executeWithTimeout { [weak self] complete in
+            eblog?("--- waiting for charger connection ---")
+            self!.webHook.startCharging()
+            self!.waitForState(states: [.charging,.full]) {
+                complete()
             }
         } onComplete: {
             onComplete()
         } onRetry: { [weak self] in
-            self?.connect(onComplete: onComplete)
+            self!.connect(onComplete: onComplete)
         }
     }
     
     func fullyRecharge(onComplete:@escaping PowerControlOnComplete) {
         connect() { [weak self] in
-            log("--- waiting for full battery ---")
+            eblog?("--- waiting for full battery ---")
             self?.waitForState(states: [.full], 1.0) {
                 onComplete()
             }
@@ -97,11 +108,11 @@ class PowerControl {
     }
     
     func disconnect(onComplete:@escaping PowerControlOnComplete) {
-        executeWithTimeout { [weak self] done in
-            log("--- waiting for charger disconnection ---")
+        executeWithTimeout { [weak self] complete in
+            eblog?("--- waiting for charger disconnection ---")
             self?.webHook.stopCharging()
             self?.waitForState(states: [.unplugged]) {
-                done()
+                complete()
             }
         } onComplete: {
             onComplete()
