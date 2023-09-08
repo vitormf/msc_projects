@@ -13,9 +13,25 @@ protocol Benchmark {
     var category:String { get }
     var identifier:String { get }
     var info:String { get }
-    
-    func execute()
+
+    func setup()
+    func execute(complete:@escaping BenchmarkBlock)
     func validate()
+}
+
+extension Benchmark {
+    func setup(){}
+}
+
+protocol BenchmarkSynchronous: Benchmark {
+    func execute()
+}
+
+extension BenchmarkSynchronous {
+    func execute(complete:BenchmarkBlock) {
+        execute()
+        complete()
+    }
 }
 
 extension Benchmark {
@@ -23,4 +39,3 @@ extension Benchmark {
 }
 
 
-let allBenchmarks:[Benchmark] = allArrayBenchmarks + allConcurrencyBenchmarks + allSleepBenchmarks

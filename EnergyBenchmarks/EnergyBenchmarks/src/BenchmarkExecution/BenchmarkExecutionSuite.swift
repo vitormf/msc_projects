@@ -6,14 +6,12 @@
 //
 
 import Foundation
-import AVFoundation
 
 typealias BenchmarkExecutionSuiteProgress = (_ completed:Bool, _ progress:Int,_ total:Int, _ result:BenchmarkResult)->()
 
 class BenchmarkExecutionSuite {
     
-    let synthesizer = AVSpeechSynthesizer()
-    
+
     let benchmarks:[Benchmark]
     private var currentExecution:BenchmarkExecution?
     
@@ -22,7 +20,7 @@ class BenchmarkExecutionSuite {
     }
     
     func execute(progress:BenchmarkExecutionSuiteProgress?) {
-        speak("Starting \(benchmarks.count) benchmarks")
+        ebspeak("Starting \(benchmarks.count) benchmarks")
         execute(benchmarks, progress: progress)
     }
     
@@ -38,19 +36,13 @@ class BenchmarkExecutionSuite {
             let completed = current == total
             progress?(completed, current, total, result)
             
-            self.speak("Benchmark \(current) \(result.identifier) finished")
+            ebspeak("Benchmark \(current) \(result.identifier) finished")
             BenchmarkReport.add(result:result)
             if completed {
-                self.speak("All benchmarks are completed!")
+                ebspeak("All benchmarks are completed!")
                 BenchmarkReport.report()
             }
         }
-    }
-    
-    private func speak(_ text:String) {
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        synthesizer.speak(utterance)
     }
     
 }

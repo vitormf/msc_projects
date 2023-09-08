@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '16.0'
+
+target 'EnergyBenchmarks' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for EnergyBenchmarks
+  pod 'TensorFlowLiteTaskVision', '0.4.3'
+  pod 'TensorFlowLiteSwift', '2.13.0'
+  pod 'SSZipArchive', '2.5.4'
+  pod 'DeviceKit', '5.0.0'
+  pod 'FirebaseDatabase', '10.13.0'
+  pod 'FirebaseAuth', '10.13.0'
+  pod 'FirebaseCrashlytics', '10.13.0'
+  pod 'LibTorch', '1.13.0.1'
+  # pod 'LibTorch-Lite', '1.13.0.1'
+  #  pod 'LibTorch-Lite-Nightly', '1.14.0.20221109'
+
+end

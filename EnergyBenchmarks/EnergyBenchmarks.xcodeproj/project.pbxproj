@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31BFB409EEBD563C7426D124 /* Pods_EnergyBenchmarks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B9727336A01AC06D6D9AB /* Pods_EnergyBenchmarks.framework */; };
+		4E0E72E429DE28D700A67ECD /* tiny_imagenet_val.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E72E229DE28D700A67ECD /* tiny_imagenet_val.zip */; };
 		4E15B227269E200B001BAB5A /* BenchmarkExecutionSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B226269E200B001BAB5A /* BenchmarkExecutionSuite.swift */; };
 		4E15B22C269F308F001BAB5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E15B22B269F308F001BAB5A /* GoogleService-Info.plist */; };
 		4E15B22E269F31E5001BAB5A /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B22D269F31E5001BAB5A /* ReportService.swift */; };
@@ -16,22 +18,58 @@
 		4E15B243269F6E40001BAB5A /* ResultsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B242269F6E40001BAB5A /* ResultsSelectionViewController.swift */; };
 		4E15B24A269F80A8001BAB5A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B249269F80A8001BAB5A /* ResultsViewController.swift */; };
 		4E15B24D269F88E8001BAB5A /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B24C269F88E8001BAB5A /* Statistics.swift */; };
-		4E15B25726A08668001BAB5A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4E15B25626A08668001BAB5A /* FirebaseAuth */; };
-		4E15B25926A08668001BAB5A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E15B25826A08668001BAB5A /* FirebaseDatabase */; };
 		4E15B26126A0C4AE001BAB5A /* ArrayAddLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26026A0C4AE001BAB5A /* ArrayAddLast.swift */; };
 		4E15B26326A0C58E001BAB5A /* ArrayAddFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26226A0C58E001BAB5A /* ArrayAddFirst.swift */; };
 		4E15B26526A0C623001BAB5A /* ArrayRemoveLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26426A0C623001BAB5A /* ArrayRemoveLast.swift */; };
 		4E15B26726A0C630001BAB5A /* ArrayRemoveFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26626A0C630001BAB5A /* ArrayRemoveFirst.swift */; };
 		4E15B26A26A0DD00001BAB5A /* SleepBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26926A0DD00001BAB5A /* SleepBenchmark.swift */; };
 		4E15B26C26A1C367001BAB5A /* SleepTrackingBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15B26B26A1C367001BAB5A /* SleepTrackingBenchmark.swift */; };
+		4E24DA2C2A9607E10043AB95 /* MachineLearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E24DA2B2A9607E10043AB95 /* MachineLearningTests.swift */; };
+		4E2512E62A553A0A00182A29 /* BertCoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2512E52A553A0A00182A29 /* BertCoreML.swift */; };
+		4E2512E82A553DB300182A29 /* BertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2512E72A553DB300182A29 /* BertTests.swift */; };
+		4E2A75F329AEAB11004BBAAF /* BenchmarksTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A75F229AEAB11004BBAAF /* BenchmarksTest.swift */; };
+		4E2A83892A079B6F006B4985 /* keras_mobilenet_v2_with_metadata.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A5C5D2A079A39006B4985 /* keras_mobilenet_v2_with_metadata.tflite */; };
+		4E2A83902A079B6F006B4985 /* keras_mobilenet_v2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A5C672A079A39006B4985 /* keras_mobilenet_v2.tflite */; };
+		4E2AAAA52A079B91006B4985 /* keras_model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A837E2A079B67006B4985 /* keras_model.tflite */; };
+		4E2AAAA92A079B91006B4985 /* ssd_mobilenet_v2_2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A83822A079B67006B4985 /* ssd_mobilenet_v2_2.mlpackage */; };
+		4E2AAABA2A079E7C006B4985 /* SqueezeNetBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AAAB92A079E7C006B4985 /* SqueezeNetBenchmark.swift */; };
+		4E2AAABF2A07A2DE006B4985 /* SqueezeNet_apple.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AAABC2A07A2DE006B4985 /* SqueezeNet_apple.mlmodel */; };
+		4E2AAAC02A07A2DE006B4985 /* squeezenet_1_metadata_1.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AAABE2A07A2DE006B4985 /* squeezenet_1_metadata_1.tflite */; };
+		4E2AAAC22A07A309006B4985 /* SqueezeNetCoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AAAC12A07A309006B4985 /* SqueezeNetCoreML.swift */; };
+		4E2AAAC42A0840B9006B4985 /* CoreMLVisionBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AAAC32A0840B9006B4985 /* CoreMLVisionBenchmark.swift */; };
 		4E2F56AD267E3685000ACBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56AC267E3685000ACBF7 /* AppDelegate.swift */; };
 		4E2F56AF267E3685000ACBF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56AE267E3685000ACBF7 /* SceneDelegate.swift */; };
-		4E2F56B1267E3685000ACBF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56B0267E3685000ACBF7 /* ViewController.swift */; };
+		4E2F56B1267E3685000ACBF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56B0267E3685000ACBF7 /* HomeViewController.swift */; };
 		4E2F56B4267E3685000ACBF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2F56B2267E3685000ACBF7 /* Main.storyboard */; };
 		4E2F56B6267E3687000ACBF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2F56B5267E3687000ACBF7 /* Assets.xcassets */; };
 		4E2F56B9267E3687000ACBF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2F56B7267E3687000ACBF7 /* LaunchScreen.storyboard */; };
 		4E2F56CF267E3687000ACBF7 /* EnergyBenchmarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F56CE267E3687000ACBF7 /* EnergyBenchmarksUITests.swift */; };
+		4E3C08292A8A9F7D004B04DC /* MobileNetV2TorchGPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C08282A8A9F7D004B04DC /* MobileNetV2TorchGPU.swift */; };
+		4E46B29F2A5EB44C003F8853 /* MobileNetV2Torch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46B29E2A5EB44C003F8853 /* MobileNetV2Torch.swift */; };
+		4E4CFDD62A0AC1A90025E9ED /* ResNet50Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDD02A0AC1A90025E9ED /* ResNet50Benchmark.swift */; };
+		4E4CFDD72A0AC1A90025E9ED /* ResNet50CoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDD12A0AC1A90025E9ED /* ResNet50CoreML.swift */; };
+		4E4CFDD82A0AC1A90025E9ED /* ResNet50TF2ML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDD22A0AC1A90025E9ED /* ResNet50TF2ML.swift */; };
+		4E4CFDD92A0AC1A90025E9ED /* ResNet50TFLite_internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDD32A0AC1A90025E9ED /* ResNet50TFLite_internal.swift */; };
+		4E4CFDDA2A0AC1A90025E9ED /* ResNet50TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDD42A0AC1A90025E9ED /* ResNet50TFLite.swift */; };
+		4E4CFDDB2A0AC1A90025E9ED /* ResNet50TF2TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDD52A0AC1A90025E9ED /* ResNet50TF2TFLite.swift */; };
+		4E4CFDDE2A0AC3050025E9ED /* Resnet50_apple.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDDC2A0AC3040025E9ED /* Resnet50_apple.mlmodel */; };
+		4E4CFDDF2A0AC3050025E9ED /* tf_to_coreml_resnet50.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDDD2A0AC3040025E9ED /* tf_to_coreml_resnet50.mlpackage */; };
+		4E4CFDE12A0AC38E0025E9ED /* keras_resnet50_with_metadata.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4E4CFDE02A0AC38E0025E9ED /* keras_resnet50_with_metadata.tflite */; };
+		4E4CFDE32A0AC65A0025E9ED /* ResNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CFDE22A0AC65A0025E9ED /* ResNetTests.swift */; };
 		4E63625426BF16B60086239F /* IntUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63625326BF16B60086239F /* IntUtils.swift */; };
+		4E65AA7929E2AF680031A790 /* MobileNetV2CoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AA7829E2AF680031A790 /* MobileNetV2CoreML.swift */; };
+		4E65AA7B29E2B1F20031A790 /* MobileNetV2TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AA7A29E2B1F20031A790 /* MobileNetV2TFLite.swift */; };
+		4E65AA7D29E2B2770031A790 /* MobileNetV2TF2ML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AA7C29E2B2770031A790 /* MobileNetV2TF2ML.swift */; };
+		4E65AA7F29E2B9460031A790 /* MobileNetV2TFLite_internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AA7E29E2B9460031A790 /* MobileNetV2TFLite_internal.swift */; };
+		4E68792B2A3C57EC00DAE274 /* BERT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68792A2A3C57EC00DAE274 /* BERT.swift */; };
+		4E68792D2A3C57FE00DAE274 /* BERTQAFP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E68792C2A3C57FE00DAE274 /* BERTQAFP16.mlmodel */; };
+		4E6879312A3C584600DAE274 /* BERTInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6879302A3C584600DAE274 /* BERTInput.swift */; };
+		4E6879332A3C586500DAE274 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6879322A3C586500DAE274 /* TokenizedString.swift */; };
+		4E6879352A3C588D00DAE274 /* BERTOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6879342A3C588D00DAE274 /* BERTOutput.swift */; };
+		4E6879372A3C58CA00DAE274 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6879362A3C58C900DAE274 /* BERTVocabulary.swift */; };
+		4E6879392A3C590000DAE274 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E6879382A3C590000DAE274 /* bert-base-uncased-vocab.txt */; };
+		4E688D2129DD59B900DE1ED8 /* DatasetTinyImageNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E688D2029DD59B900DE1ED8 /* DatasetTinyImageNet.swift */; };
+		4E70AC7D29BBC81C00CC2F30 /* MobileNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E70AC7C29BBC81C00CC2F30 /* MobileNetTests.swift */; };
 		4E7824382699EBE9000A1ED4 /* PowerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7824372699EBE9000A1ED4 /* PowerControl.swift */; };
 		4E7824392699EC52000A1ED4 /* SmartSwitchWebhook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB09F92680C73300158260 /* SmartSwitchWebhook.swift */; };
 		4E78243A2699EC56000A1ED4 /* BatteryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB09F72680C69A00158260 /* BatteryMonitor.swift */; };
@@ -39,15 +77,70 @@
 		4E78243C2699EC5F000A1ED4 /* UIDevice+modelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB0A052682215000158260 /* UIDevice+modelName.swift */; };
 		4E78243D2699EC63000A1ED4 /* BenchmarkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB0A012682153B00158260 /* BenchmarkResult.swift */; };
 		4E78243E2699EC67000A1ED4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB0A0726822CA500158260 /* Log.swift */; };
-		4E782441269A0C3A000A1ED4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4E782440269A0C3A000A1ED4 /* DeviceKit */; };
 		4E782445269A1A49000A1ED4 /* ConcurrencyBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E782444269A1A49000A1ED4 /* ConcurrencyBenchmark.swift */; };
 		4E782447269A1A8F000A1ED4 /* ConcurrencySequential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E782446269A1A8F000A1ED4 /* ConcurrencySequential.swift */; };
 		4E782449269A1AD9000A1ED4 /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E782448269A1AD9000A1ED4 /* Benchmark.swift */; };
 		4E78244B269A2133000A1ED4 /* ConcurrencyOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78244A269A2133000A1ED4 /* ConcurrencyOperationQueue.swift */; };
 		4E78244D269A23D6000A1ED4 /* BenchmarkExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78244C269A23D6000A1ED4 /* BenchmarkExecution.swift */; };
+		4E7827712A27576C0031B671 /* imagenet_val.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4E7827702A27576C0031B671 /* imagenet_val.zip */; };
+		4E82EF4D2A97889000834837 /* squeezenet1_0-b66bff10.pt in Resources */ = {isa = PBXBuildFile; fileRef = 4E82EF4C2A97889000834837 /* squeezenet1_0-b66bff10.pt */; };
+		4E82EF4F2A9788B000834837 /* SqueezeNetTorch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82EF4E2A9788B000834837 /* SqueezeNetTorch.swift */; };
+		4E82EF572A978A3600834837 /* new_squeezenet1_0.pt in Resources */ = {isa = PBXBuildFile; fileRef = 4E82EF562A978A3600834837 /* new_squeezenet1_0.pt */; };
+		4E8B9BC229BBEDB00024738E /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B9BC129BBEDB00024738E /* Labels.swift */; };
+		4E9677742A961893007C51FA /* resnet_quantized.pt in Resources */ = {isa = PBXBuildFile; fileRef = 4E9677722A961893007C51FA /* resnet_quantized.pt */; };
+		4E9677762A9618BC007C51FA /* ResNet50Torch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9677752A9618BC007C51FA /* ResNet50Torch.swift */; };
+		4E9677782A964884007C51FA /* Resnet50TorchGPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9677772A964884007C51FA /* Resnet50TorchGPU.swift */; };
+		4EA0EBD32A8A5C1000DF9CC1 /* FirebaseResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0EBD22A8A5C1000DF9CC1 /* FirebaseResults.swift */; };
+		4EA9077A29DD267D00C32E57 /* MobileNetV2_apple.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E04B29DD266300C32E57 /* MobileNetV2_apple.mlmodel */; };
+		4EA9077B29DD267D00C32E57 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E04C29DD266300C32E57 /* MobileNet.mlmodel */; };
+		4EA9077C29DD267D00C32E57 /* MobileNetBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E04D29DD266300C32E57 /* MobileNetBenchmark.swift */; };
+		4EA9077D29DD267D00C32E57 /* MachineLearningBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E04E29DD266300C32E57 /* MachineLearningBenchmark.swift */; };
+		4EA9E05E29DD266D00C32E57 /* mobilenet_v2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B92A29DD252A00C32E57 /* mobilenet_v2.tflite */; };
+		4EA9E05F29DD266D00C32E57 /* mobilenet_v2_quant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B92B29DD252A00C32E57 /* mobilenet_v2_quant.tflite */; };
+		4EA9E06029DD266D00C32E57 /* efficientnet_lite3.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B92C29DD252A00C32E57 /* efficientnet_lite3.tflite */; };
+		4EA9E06129DD266D00C32E57 /* mobilenet_v2_quant_metadata.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B92D29DD252A00C32E57 /* mobilenet_v2_quant_metadata.tflite */; };
+		4EA9E06229DD266D00C32E57 /* efficientnet_lite1.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B92E29DD252A00C32E57 /* efficientnet_lite1.tflite */; };
+		4EA9E06329DD266D00C32E57 /* efficientnet_lite4.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B92F29DD252A00C32E57 /* efficientnet_lite4.tflite */; };
+		4EA9E06429DD266D00C32E57 /* .python-version in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B93029DD252A00C32E57 /* .python-version */; };
+		4EA9E06529DD266D00C32E57 /* efficientnet_lite2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B93129DD252A00C32E57 /* efficientnet_lite2.tflite */; };
+		4EA9E06629DD266D00C32E57 /* mobilenet_v2_quant_default.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B93229DD252A00C32E57 /* mobilenet_v2_quant_default.tflite */; };
+		4EA9E06729DD266D00C32E57 /* efficientnet_lite0.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9B93329DD252A00C32E57 /* efficientnet_lite0.tflite */; };
+		4EAB61D32A556FBD00BB0BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61C32A556FBD00BB0BF9 /* Constants.swift */; };
+		4EAB61D42A556FBD00BB0BF9 /* BertQAHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61C42A556FBD00BB0BF9 /* BertQAHandler.swift */; };
+		4EAB61D52A556FBD00BB0BF9 /* UnicodeScalarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61C52A556FBD00BB0BF9 /* UnicodeScalarExtension.swift */; };
+		4EAB61D62A556FBD00BB0BF9 /* contents_from_squad_dict_format.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB61C62A556FBD00BB0BF9 /* contents_from_squad_dict_format.json */; };
+		4EAB61D72A556FBD00BB0BF9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61C72A556FBD00BB0BF9 /* Result.swift */; };
+		4EAB61D82A556FBD00BB0BF9 /* InputFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61C82A556FBD00BB0BF9 /* InputFeatures.swift */; };
+		4EAB61D92A556FBD00BB0BF9 /* mobilebert_float_20191023.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB61C92A556FBD00BB0BF9 /* mobilebert_float_20191023.tflite */; };
+		4EAB61DA2A556FBD00BB0BF9 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61CA2A556FBD00BB0BF9 /* FileLoader.swift */; };
+		4EAB61DB2A556FBD00BB0BF9 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61CB2A556FBD00BB0BF9 /* Dataset.swift */; };
+		4EAB61DC2A556FBD00BB0BF9 /* vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB61CC2A556FBD00BB0BF9 /* vocab.txt */; };
+		4EAB61DD2A556FBD00BB0BF9 /* FullTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61CD2A556FBD00BB0BF9 /* FullTokenizer.swift */; };
+		4EAB61DE2A556FBD00BB0BF9 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61CE2A556FBD00BB0BF9 /* DataExtension.swift */; };
+		4EAB61DF2A556FBD00BB0BF9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61CF2A556FBD00BB0BF9 /* StringExtension.swift */; };
+		4EAB61E02A556FBD00BB0BF9 /* ContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61D02A556FBD00BB0BF9 /* ContentData.swift */; };
+		4EAB61E12A556FBD00BB0BF9 /* WordpieceTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61D12A556FBD00BB0BF9 /* WordpieceTokenizer.swift */; };
+		4EAB61E22A556FBD00BB0BF9 /* BasicTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61D22A556FBD00BB0BF9 /* BasicTokenizer.swift */; };
+		4EAB61E62A55709700BB0BF9 /* BertBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61E52A55709700BB0BF9 /* BertBenchmark.swift */; };
+		4EAB61EA2A55715300BB0BF9 /* BertTFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB61E92A55715300BB0BF9 /* BertTFLite.swift */; };
+		4EBB22312978183300F020BD /* ThroughputBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB22302978183300F020BD /* ThroughputBenchmark.swift */; };
 		4ECB0A0426821DD900158260 /* EnergyBenchmarksAsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB0A0326821DD900158260 /* EnergyBenchmarksAsTests.swift */; };
+		4EDA44BD29A58544007EBDB3 /* Speak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA44BC29A58544007EBDB3 /* Speak.swift */; };
+		4EDC56A729F2E9B0008F0780 /* MobileNetV2TF2TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC56A629F2E9B0008F0780 /* MobileNetV2TF2TFLite.swift */; };
+		4EE43A0029DEFBA20045E011 /* tree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EE439FF29DEFBA20045E011 /* tree.jpg */; };
+		4EE64CE72A0852B700A5AB71 /* TFLiteVisionBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE64CE62A0852B700A5AB71 /* TFLiteVisionBenchmark.swift */; };
+		4EE64CE92A08579600A5AB71 /* SqueezeNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE64CE82A08579600A5AB71 /* SqueezeNetTests.swift */; };
+		4EE64CEB2A0859FA00A5AB71 /* SqueezeNetTFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE64CEA2A0859FA00A5AB71 /* SqueezeNetTFLite.swift */; };
 		4EE82920269B22A100D88A0F /* BenchmarkReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8291F269B22A100D88A0F /* BenchmarkReport.swift */; };
 		4EE82923269B2A8C00D88A0F /* ArrayBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE82922269B2A8C00D88A0F /* ArrayBenchmark.swift */; };
+		562FF00D2A85FF2700790864 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FF0022A85FF2700790864 /* ImagePredictor.swift */; };
+		562FF00E2A85FF2700790864 /* CVPixelBuffer+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FF0032A85FF2700790864 /* CVPixelBuffer+Helper.swift */; };
+		562FF0102A85FF2700790864 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 562FF0062A85FF2700790864 /* words.txt */; };
+		562FF0112A85FF2700790864 /* mobilenet_quantized.pt in Resources */ = {isa = PBXBuildFile; fileRef = 562FF0072A85FF2700790864 /* mobilenet_quantized.pt */; };
+		562FF0122A85FF2700790864 /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FF0082A85FF2700790864 /* Predictor.swift */; };
+		562FF0132A85FF2700790864 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 562FF00A2A85FF2700790864 /* TorchModule.mm */; };
+		562FF0152A8600BC00790864 /* PyTorchVisionBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FF0142A8600BC00790864 /* PyTorchVisionBenchmark.swift */; };
+		562FF0172A86036D00790864 /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FF0162A86036D00790864 /* UIImage+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +161,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DDCF1D79B57295A7AF0A4C4 /* Pods-EnergyBenchmarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnergyBenchmarks.debug.xcconfig"; path = "Target Support Files/Pods-EnergyBenchmarks/Pods-EnergyBenchmarks.debug.xcconfig"; sourceTree = "<group>"; };
+		4E0E72E229DE28D700A67ECD /* tiny_imagenet_val.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = tiny_imagenet_val.zip; sourceTree = "<group>"; };
 		4E15B226269E200B001BAB5A /* BenchmarkExecutionSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkExecutionSuite.swift; sourceTree = "<group>"; };
 		4E15B22B269F308F001BAB5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E15B22D269F31E5001BAB5A /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
@@ -83,10 +178,29 @@
 		4E15B26626A0C630001BAB5A /* ArrayRemoveFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRemoveFirst.swift; sourceTree = "<group>"; };
 		4E15B26926A0DD00001BAB5A /* SleepBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepBenchmark.swift; sourceTree = "<group>"; };
 		4E15B26B26A1C367001BAB5A /* SleepTrackingBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTrackingBenchmark.swift; sourceTree = "<group>"; };
+		4E24DA2B2A9607E10043AB95 /* MachineLearningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearningTests.swift; sourceTree = "<group>"; };
+		4E2512E52A553A0A00182A29 /* BertCoreML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BertCoreML.swift; sourceTree = "<group>"; };
+		4E2512E72A553DB300182A29 /* BertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BertTests.swift; sourceTree = "<group>"; };
+		4E2A5C5D2A079A39006B4985 /* keras_mobilenet_v2_with_metadata.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = keras_mobilenet_v2_with_metadata.tflite; sourceTree = "<group>"; };
+		4E2A5C672A079A39006B4985 /* keras_mobilenet_v2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = keras_mobilenet_v2.tflite; sourceTree = "<group>"; };
+		4E2A5C682A079A39006B4985 /* convert.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert.py; sourceTree = "<group>"; };
+		4E2A75F229AEAB11004BBAAF /* BenchmarksTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarksTest.swift; sourceTree = "<group>"; };
+		4E2A837C2A079B67006B4985 /* .python-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".python-version"; sourceTree = "<group>"; };
+		4E2A837D2A079B67006B4985 /* mobilenet_v2_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mobilenet_v2_labels.txt; sourceTree = "<group>"; };
+		4E2A837E2A079B67006B4985 /* keras_model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = keras_model.tflite; sourceTree = "<group>"; };
+		4E2A837F2A079B67006B4985 /* convert3.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert3.py; sourceTree = "<group>"; };
+		4E2A83812A079B67006B4985 /* convert_to_tflite2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_to_tflite2.py; sourceTree = "<group>"; };
+		4E2A83822A079B67006B4985 /* ssd_mobilenet_v2_2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = ssd_mobilenet_v2_2.mlpackage; sourceTree = "<group>"; };
+		4E2A83832A079B67006B4985 /* convert2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert2.py; sourceTree = "<group>"; };
+		4E2AAAB92A079E7C006B4985 /* SqueezeNetBenchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqueezeNetBenchmark.swift; sourceTree = "<group>"; };
+		4E2AAABC2A07A2DE006B4985 /* SqueezeNet_apple.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet_apple.mlmodel; sourceTree = "<group>"; };
+		4E2AAABE2A07A2DE006B4985 /* squeezenet_1_metadata_1.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = squeezenet_1_metadata_1.tflite; sourceTree = "<group>"; };
+		4E2AAAC12A07A309006B4985 /* SqueezeNetCoreML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqueezeNetCoreML.swift; sourceTree = "<group>"; };
+		4E2AAAC32A0840B9006B4985 /* CoreMLVisionBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLVisionBenchmark.swift; sourceTree = "<group>"; };
 		4E2F56A9267E3685000ACBF7 /* EnergyBenchmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyBenchmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2F56AC267E3685000ACBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E2F56AE267E3685000ACBF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E2F56B0267E3685000ACBF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E2F56B0267E3685000ACBF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E2F56B3267E3685000ACBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E2F56B5267E3687000ACBF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E2F56B8267E3687000ACBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,13 +210,88 @@
 		4E2F56CA267E3687000ACBF7 /* EnergyBenchmarksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyBenchmarksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2F56CE267E3687000ACBF7 /* EnergyBenchmarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBenchmarksUITests.swift; sourceTree = "<group>"; };
 		4E2F56D0267E3687000ACBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E3C08282A8A9F7D004B04DC /* MobileNetV2TorchGPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetV2TorchGPU.swift; sourceTree = "<group>"; };
+		4E46B29E2A5EB44C003F8853 /* MobileNetV2Torch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetV2Torch.swift; sourceTree = "<group>"; };
+		4E4CFDC12A0AC0890025E9ED /* convert_to_coreml_mobilenetv2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_to_coreml_mobilenetv2.py; sourceTree = "<group>"; };
+		4E4CFDC22A0AC0890025E9ED /* resnet50_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = resnet50_labels.txt; sourceTree = "<group>"; };
+		4E4CFDC32A0AC0890025E9ED /* convert_to_coreml_resnet50.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_to_coreml_resnet50.py; sourceTree = "<group>"; };
+		4E4CFDC42A0AC08A0025E9ED /* convert_to_tflite_resnet50.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_to_tflite_resnet50.py; sourceTree = "<group>"; };
+		4E4CFDC52A0AC08A0025E9ED /* convert_to_tflite_mobilenetv2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_to_tflite_mobilenetv2.py; sourceTree = "<group>"; };
+		4E4CFDC62A0AC08A0025E9ED /* convert_to_coreml_squeezenet.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_to_coreml_squeezenet.py; sourceTree = "<group>"; };
+		4E4CFDD02A0AC1A90025E9ED /* ResNet50Benchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResNet50Benchmark.swift; sourceTree = "<group>"; };
+		4E4CFDD12A0AC1A90025E9ED /* ResNet50CoreML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResNet50CoreML.swift; sourceTree = "<group>"; };
+		4E4CFDD22A0AC1A90025E9ED /* ResNet50TF2ML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResNet50TF2ML.swift; sourceTree = "<group>"; };
+		4E4CFDD32A0AC1A90025E9ED /* ResNet50TFLite_internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResNet50TFLite_internal.swift; sourceTree = "<group>"; };
+		4E4CFDD42A0AC1A90025E9ED /* ResNet50TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResNet50TFLite.swift; sourceTree = "<group>"; };
+		4E4CFDD52A0AC1A90025E9ED /* ResNet50TF2TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResNet50TF2TFLite.swift; sourceTree = "<group>"; };
+		4E4CFDDC2A0AC3040025E9ED /* Resnet50_apple.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50_apple.mlmodel; sourceTree = "<group>"; };
+		4E4CFDDD2A0AC3040025E9ED /* tf_to_coreml_resnet50.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = tf_to_coreml_resnet50.mlpackage; sourceTree = "<group>"; };
+		4E4CFDE02A0AC38E0025E9ED /* keras_resnet50_with_metadata.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = keras_resnet50_with_metadata.tflite; sourceTree = "<group>"; };
+		4E4CFDE22A0AC65A0025E9ED /* ResNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResNetTests.swift; sourceTree = "<group>"; };
 		4E63625326BF16B60086239F /* IntUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntUtils.swift; sourceTree = "<group>"; };
+		4E65AA7829E2AF680031A790 /* MobileNetV2CoreML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetV2CoreML.swift; sourceTree = "<group>"; };
+		4E65AA7A29E2B1F20031A790 /* MobileNetV2TFLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetV2TFLite.swift; sourceTree = "<group>"; };
+		4E65AA7C29E2B2770031A790 /* MobileNetV2TF2ML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetV2TF2ML.swift; sourceTree = "<group>"; };
+		4E65AA7E29E2B9460031A790 /* MobileNetV2TFLite_internal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetV2TFLite_internal.swift; sourceTree = "<group>"; };
+		4E68792A2A3C57EC00DAE274 /* BERT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERT.swift; sourceTree = "<group>"; };
+		4E68792C2A3C57FE00DAE274 /* BERTQAFP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BERTQAFP16.mlmodel; sourceTree = "<group>"; };
+		4E6879302A3C584600DAE274 /* BERTInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTInput.swift; sourceTree = "<group>"; };
+		4E6879322A3C586500DAE274 /* TokenizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedString.swift; sourceTree = "<group>"; };
+		4E6879342A3C588D00DAE274 /* BERTOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTOutput.swift; sourceTree = "<group>"; };
+		4E6879362A3C58C900DAE274 /* BERTVocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTVocabulary.swift; sourceTree = "<group>"; };
+		4E6879382A3C590000DAE274 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
+		4E688D2029DD59B900DE1ED8 /* DatasetTinyImageNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetTinyImageNet.swift; sourceTree = "<group>"; };
+		4E70AC7C29BBC81C00CC2F30 /* MobileNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetTests.swift; sourceTree = "<group>"; };
 		4E7824372699EBE9000A1ED4 /* PowerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerControl.swift; sourceTree = "<group>"; };
 		4E782444269A1A49000A1ED4 /* ConcurrencyBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyBenchmark.swift; sourceTree = "<group>"; };
 		4E782446269A1A8F000A1ED4 /* ConcurrencySequential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencySequential.swift; sourceTree = "<group>"; };
 		4E782448269A1AD9000A1ED4 /* Benchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
 		4E78244A269A2133000A1ED4 /* ConcurrencyOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyOperationQueue.swift; sourceTree = "<group>"; };
 		4E78244C269A23D6000A1ED4 /* BenchmarkExecution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkExecution.swift; sourceTree = "<group>"; };
+		4E7827702A27576C0031B671 /* imagenet_val.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = imagenet_val.zip; sourceTree = "<group>"; };
+		4E82EF4C2A97889000834837 /* squeezenet1_0-b66bff10.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "squeezenet1_0-b66bff10.pt"; sourceTree = "<group>"; };
+		4E82EF4E2A9788B000834837 /* SqueezeNetTorch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqueezeNetTorch.swift; sourceTree = "<group>"; };
+		4E82EF562A978A3600834837 /* new_squeezenet1_0.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_squeezenet1_0.pt; sourceTree = "<group>"; };
+		4E8B9BC129BBEDB00024738E /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		4E9677712A961893007C51FA /* trace_model.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = trace_model.py; sourceTree = "<group>"; };
+		4E9677722A961893007C51FA /* resnet_quantized.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = resnet_quantized.pt; sourceTree = "<group>"; };
+		4E9677752A9618BC007C51FA /* ResNet50Torch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResNet50Torch.swift; sourceTree = "<group>"; };
+		4E9677772A964884007C51FA /* Resnet50TorchGPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resnet50TorchGPU.swift; sourceTree = "<group>"; };
+		4EA0EBD22A8A5C1000DF9CC1 /* FirebaseResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResults.swift; sourceTree = "<group>"; };
+		4EA9B92A29DD252A00C32E57 /* mobilenet_v2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_v2.tflite; sourceTree = "<group>"; };
+		4EA9B92B29DD252A00C32E57 /* mobilenet_v2_quant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_v2_quant.tflite; sourceTree = "<group>"; };
+		4EA9B92C29DD252A00C32E57 /* efficientnet_lite3.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientnet_lite3.tflite; sourceTree = "<group>"; };
+		4EA9B92D29DD252A00C32E57 /* mobilenet_v2_quant_metadata.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_v2_quant_metadata.tflite; sourceTree = "<group>"; };
+		4EA9B92E29DD252A00C32E57 /* efficientnet_lite1.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientnet_lite1.tflite; sourceTree = "<group>"; };
+		4EA9B92F29DD252A00C32E57 /* efficientnet_lite4.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientnet_lite4.tflite; sourceTree = "<group>"; };
+		4EA9B93029DD252A00C32E57 /* .python-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".python-version"; sourceTree = "<group>"; };
+		4EA9B93129DD252A00C32E57 /* efficientnet_lite2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientnet_lite2.tflite; sourceTree = "<group>"; };
+		4EA9B93229DD252A00C32E57 /* mobilenet_v2_quant_default.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_v2_quant_default.tflite; sourceTree = "<group>"; };
+		4EA9B93329DD252A00C32E57 /* efficientnet_lite0.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientnet_lite0.tflite; sourceTree = "<group>"; };
+		4EA9E04B29DD266300C32E57 /* MobileNetV2_apple.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2_apple.mlmodel; sourceTree = "<group>"; };
+		4EA9E04C29DD266300C32E57 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		4EA9E04D29DD266300C32E57 /* MobileNetBenchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileNetBenchmark.swift; sourceTree = "<group>"; };
+		4EA9E04E29DD266300C32E57 /* MachineLearningBenchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineLearningBenchmark.swift; sourceTree = "<group>"; };
+		4EAB61C32A556FBD00BB0BF9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4EAB61C42A556FBD00BB0BF9 /* BertQAHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertQAHandler.swift; sourceTree = "<group>"; };
+		4EAB61C52A556FBD00BB0BF9 /* UnicodeScalarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeScalarExtension.swift; sourceTree = "<group>"; };
+		4EAB61C62A556FBD00BB0BF9 /* contents_from_squad_dict_format.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contents_from_squad_dict_format.json; sourceTree = "<group>"; };
+		4EAB61C72A556FBD00BB0BF9 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4EAB61C82A556FBD00BB0BF9 /* InputFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFeatures.swift; sourceTree = "<group>"; };
+		4EAB61C92A556FBD00BB0BF9 /* mobilebert_float_20191023.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilebert_float_20191023.tflite; sourceTree = "<group>"; };
+		4EAB61CA2A556FBD00BB0BF9 /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
+		4EAB61CB2A556FBD00BB0BF9 /* Dataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
+		4EAB61CC2A556FBD00BB0BF9 /* vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocab.txt; sourceTree = "<group>"; };
+		4EAB61CD2A556FBD00BB0BF9 /* FullTokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullTokenizer.swift; sourceTree = "<group>"; };
+		4EAB61CE2A556FBD00BB0BF9 /* DataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		4EAB61CF2A556FBD00BB0BF9 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4EAB61D02A556FBD00BB0BF9 /* ContentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentData.swift; sourceTree = "<group>"; };
+		4EAB61D12A556FBD00BB0BF9 /* WordpieceTokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordpieceTokenizer.swift; sourceTree = "<group>"; };
+		4EAB61D22A556FBD00BB0BF9 /* BasicTokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTokenizer.swift; sourceTree = "<group>"; };
+		4EAB61E52A55709700BB0BF9 /* BertBenchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertBenchmark.swift; sourceTree = "<group>"; };
+		4EAB61E92A55715300BB0BF9 /* BertTFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertTFLite.swift; sourceTree = "<group>"; };
+		4EBAEB2B29F71F600013FA64 /* EnergyBenchmarks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnergyBenchmarks.entitlements; sourceTree = "<group>"; };
+		4EBB22302978183300F020BD /* ThroughputBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThroughputBenchmark.swift; sourceTree = "<group>"; };
 		4ECB09F72680C69A00158260 /* BatteryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryMonitor.swift; sourceTree = "<group>"; };
 		4ECB09F92680C73300158260 /* SmartSwitchWebhook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSwitchWebhook.swift; sourceTree = "<group>"; };
 		4ECB09FB2680CAC400158260 /* BatteryState+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatteryState+Extension.swift"; sourceTree = "<group>"; };
@@ -110,8 +299,27 @@
 		4ECB0A0326821DD900158260 /* EnergyBenchmarksAsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBenchmarksAsTests.swift; sourceTree = "<group>"; };
 		4ECB0A052682215000158260 /* UIDevice+modelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+modelName.swift"; sourceTree = "<group>"; };
 		4ECB0A0726822CA500158260 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4EDA44BC29A58544007EBDB3 /* Speak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speak.swift; sourceTree = "<group>"; };
+		4EDC56A629F2E9B0008F0780 /* MobileNetV2TF2TFLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetV2TF2TFLite.swift; sourceTree = "<group>"; };
+		4EE439FF29DEFBA20045E011 /* tree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tree.jpg; sourceTree = "<group>"; };
+		4EE64CE62A0852B700A5AB71 /* TFLiteVisionBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLiteVisionBenchmark.swift; sourceTree = "<group>"; };
+		4EE64CE82A08579600A5AB71 /* SqueezeNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqueezeNetTests.swift; sourceTree = "<group>"; };
+		4EE64CEA2A0859FA00A5AB71 /* SqueezeNetTFLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqueezeNetTFLite.swift; sourceTree = "<group>"; };
 		4EE8291F269B22A100D88A0F /* BenchmarkReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkReport.swift; sourceTree = "<group>"; };
 		4EE82922269B2A8C00D88A0F /* ArrayBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayBenchmark.swift; sourceTree = "<group>"; };
+		562FF0022A85FF2700790864 /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
+		562FF0032A85FF2700790864 /* CVPixelBuffer+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helper.swift"; sourceTree = "<group>"; };
+		562FF0052A85FF2700790864 /* trace_model.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = trace_model.py; sourceTree = "<group>"; };
+		562FF0062A85FF2700790864 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		562FF0072A85FF2700790864 /* mobilenet_quantized.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quantized.pt; sourceTree = "<group>"; };
+		562FF0082A85FF2700790864 /* Predictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		562FF00A2A85FF2700790864 /* TorchModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
+		562FF00B2A85FF2700790864 /* TorchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
+		562FF00C2A85FF2700790864 /* PyTorchDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PyTorchDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		562FF0142A8600BC00790864 /* PyTorchVisionBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyTorchVisionBenchmark.swift; sourceTree = "<group>"; };
+		562FF0162A86036D00790864 /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Helper.swift"; path = "EnergyBenchmarks/src/Benchmarks/MachineLearning/Pytorch/UIImage+Helper.swift"; sourceTree = SOURCE_ROOT; };
+		D208CD8BD29E138ECD3A3A54 /* Pods-EnergyBenchmarks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnergyBenchmarks.release.xcconfig"; path = "Target Support Files/Pods-EnergyBenchmarks/Pods-EnergyBenchmarks.release.xcconfig"; sourceTree = "<group>"; };
+		DA1B9727336A01AC06D6D9AB /* Pods_EnergyBenchmarks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnergyBenchmarks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E15B25926A08668001BAB5A /* FirebaseDatabase in Frameworks */,
-				4E782441269A0C3A000A1ED4 /* DeviceKit in Frameworks */,
-				4E15B25726A08668001BAB5A /* FirebaseAuth in Frameworks */,
+				31BFB409EEBD563C7426D124 /* Pods_EnergyBenchmarks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,12 +348,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E409CC8117AB625292D8F4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B9727336A01AC06D6D9AB /* Pods_EnergyBenchmarks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21511838624F55F8C79A41AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DDCF1D79B57295A7AF0A4C4 /* Pods-EnergyBenchmarks.debug.xcconfig */,
+				D208CD8BD29E138ECD3A3A54 /* Pods-EnergyBenchmarks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E13A52E2A3C572700FA439C /* BERT */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB61C22A556FBD00BB0BF9 /* TTFLite */,
+				4E6879272A3C579C00DAE274 /* CoreML */,
+				4EAB61E52A55709700BB0BF9 /* BertBenchmark.swift */,
+				4EAB61E92A55715300BB0BF9 /* BertTFLite.swift */,
+				4E2512E52A553A0A00182A29 /* BertCoreML.swift */,
+			);
+			path = BERT;
+			sourceTree = "<group>";
+		};
 		4E15B23D269F51D2001BAB5A /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				4E15B244269F6E44001BAB5A /* Benchmarks */,
 				4E15B245269F6E56001BAB5A /* Results */,
-				4E2F56B0267E3685000ACBF7 /* ViewController.swift */,
+				4E2F56B0267E3685000ACBF7 /* HomeViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -187,6 +422,58 @@
 			path = Sleep;
 			sourceTree = "<group>";
 		};
+		4E2A5C5C2A079A39006B4985 /* Tensorflow */ = {
+			isa = PBXGroup;
+			children = (
+				4E4CFDC12A0AC0890025E9ED /* convert_to_coreml_mobilenetv2.py */,
+				4E4CFDC32A0AC0890025E9ED /* convert_to_coreml_resnet50.py */,
+				4E4CFDC62A0AC08A0025E9ED /* convert_to_coreml_squeezenet.py */,
+				4E4CFDC52A0AC08A0025E9ED /* convert_to_tflite_mobilenetv2.py */,
+				4E4CFDC42A0AC08A0025E9ED /* convert_to_tflite_resnet50.py */,
+				4E4CFDC22A0AC0890025E9ED /* resnet50_labels.txt */,
+				4E2A5C5D2A079A39006B4985 /* keras_mobilenet_v2_with_metadata.tflite */,
+				4E2A5C672A079A39006B4985 /* keras_mobilenet_v2.tflite */,
+				4E2A5C682A079A39006B4985 /* convert.py */,
+				4E2A837C2A079B67006B4985 /* .python-version */,
+				4E2A837D2A079B67006B4985 /* mobilenet_v2_labels.txt */,
+				4E2A837E2A079B67006B4985 /* keras_model.tflite */,
+				4E2A837F2A079B67006B4985 /* convert3.py */,
+				4E2A83812A079B67006B4985 /* convert_to_tflite2.py */,
+				4E2A83822A079B67006B4985 /* ssd_mobilenet_v2_2.mlpackage */,
+				4E2A83832A079B67006B4985 /* convert2.py */,
+			);
+			path = Tensorflow;
+			sourceTree = "<group>";
+		};
+		4E2AAAB82A079E7C006B4985 /* SqueezeNet */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AAABB2A07A2DE006B4985 /* CoreML */,
+				4E2AAABD2A07A2DE006B4985 /* TFLite */,
+				4E2AAAB92A079E7C006B4985 /* SqueezeNetBenchmark.swift */,
+				4E2AAAC12A07A309006B4985 /* SqueezeNetCoreML.swift */,
+				4EE64CEA2A0859FA00A5AB71 /* SqueezeNetTFLite.swift */,
+				4E82EF4E2A9788B000834837 /* SqueezeNetTorch.swift */,
+			);
+			path = SqueezeNet;
+			sourceTree = "<group>";
+		};
+		4E2AAABB2A07A2DE006B4985 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AAABC2A07A2DE006B4985 /* SqueezeNet_apple.mlmodel */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		4E2AAABD2A07A2DE006B4985 /* TFLite */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AAABE2A07A2DE006B4985 /* squeezenet_1_metadata_1.tflite */,
+			);
+			path = TFLite;
+			sourceTree = "<group>";
+		};
 		4E2F56A0267E3685000ACBF7 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +481,8 @@
 				4E2F56C2267E3687000ACBF7 /* EnergyBenchmarksTests */,
 				4E2F56CD267E3687000ACBF7 /* EnergyBenchmarksUITests */,
 				4E2F56AA267E3685000ACBF7 /* Products */,
+				21511838624F55F8C79A41AA /* Pods */,
+				0E409CC8117AB625292D8F4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +499,7 @@
 		4E2F56AB267E3685000ACBF7 /* EnergyBenchmarks */ = {
 			isa = PBXGroup;
 			children = (
+				4EBAEB2B29F71F600013FA64 /* EnergyBenchmarks.entitlements */,
 				4E15B23D269F51D2001BAB5A /* UI */,
 				4E7824362699E9CD000A1ED4 /* src */,
 				4E2F56AC267E3685000ACBF7 /* AppDelegate.swift */,
@@ -251,6 +541,68 @@
 			path = BenchmarkExecution;
 			sourceTree = "<group>";
 		};
+		4E4CFDCF2A0AC1500025E9ED /* ResNet50 */ = {
+			isa = PBXGroup;
+			children = (
+				4E4CFDE02A0AC38E0025E9ED /* keras_resnet50_with_metadata.tflite */,
+				4E4CFDDC2A0AC3040025E9ED /* Resnet50_apple.mlmodel */,
+				4E4CFDDD2A0AC3040025E9ED /* tf_to_coreml_resnet50.mlpackage */,
+				4E4CFDD02A0AC1A90025E9ED /* ResNet50Benchmark.swift */,
+				4E4CFDD12A0AC1A90025E9ED /* ResNet50CoreML.swift */,
+				4E4CFDD22A0AC1A90025E9ED /* ResNet50TF2ML.swift */,
+				4E4CFDD52A0AC1A90025E9ED /* ResNet50TF2TFLite.swift */,
+				4E4CFDD32A0AC1A90025E9ED /* ResNet50TFLite_internal.swift */,
+				4E4CFDD42A0AC1A90025E9ED /* ResNet50TFLite.swift */,
+				4E9677752A9618BC007C51FA /* ResNet50Torch.swift */,
+				4E9677772A964884007C51FA /* Resnet50TorchGPU.swift */,
+			);
+			path = ResNet50;
+			sourceTree = "<group>";
+		};
+		4E65AA7729E2AF0A0031A790 /* MobileNet */ = {
+			isa = PBXGroup;
+			children = (
+				4E2A5C5C2A079A39006B4985 /* Tensorflow */,
+				4E688D1E29DD59B900DE1ED8 /* Datasets */,
+				4EA9B92929DD252A00C32E57 /* TFLite */,
+				4EA9E04929DD266300C32E57 /* CoreML */,
+				4EA9E04D29DD266300C32E57 /* MobileNetBenchmark.swift */,
+				4E65AA7829E2AF680031A790 /* MobileNetV2CoreML.swift */,
+				4E65AA7C29E2B2770031A790 /* MobileNetV2TF2ML.swift */,
+				4E65AA7A29E2B1F20031A790 /* MobileNetV2TFLite.swift */,
+				4E65AA7E29E2B9460031A790 /* MobileNetV2TFLite_internal.swift */,
+				4EDC56A629F2E9B0008F0780 /* MobileNetV2TF2TFLite.swift */,
+				4E46B29E2A5EB44C003F8853 /* MobileNetV2Torch.swift */,
+				4E3C08282A8A9F7D004B04DC /* MobileNetV2TorchGPU.swift */,
+			);
+			path = MobileNet;
+			sourceTree = "<group>";
+		};
+		4E6879272A3C579C00DAE274 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				4E6879382A3C590000DAE274 /* bert-base-uncased-vocab.txt */,
+				4E6879362A3C58C900DAE274 /* BERTVocabulary.swift */,
+				4E68792A2A3C57EC00DAE274 /* BERT.swift */,
+				4E6879302A3C584600DAE274 /* BERTInput.swift */,
+				4E6879342A3C588D00DAE274 /* BERTOutput.swift */,
+				4E68792C2A3C57FE00DAE274 /* BERTQAFP16.mlmodel */,
+				4E6879322A3C586500DAE274 /* TokenizedString.swift */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		4E688D1E29DD59B900DE1ED8 /* Datasets */ = {
+			isa = PBXGroup;
+			children = (
+				4E7827702A27576C0031B671 /* imagenet_val.zip */,
+				4EE439FF29DEFBA20045E011 /* tree.jpg */,
+				4E0E72E229DE28D700A67ECD /* tiny_imagenet_val.zip */,
+				4E688D2029DD59B900DE1ED8 /* DatasetTinyImageNet.swift */,
+			);
+			path = Datasets;
+			sourceTree = "<group>";
+		};
 		4E7824322699E883000A1ED4 /* BatteryMonitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +638,7 @@
 			children = (
 				4ECB0A0726822CA500158260 /* Log.swift */,
 				4E63625326BF16B60086239F /* IntUtils.swift */,
+				4EDA44BC29A58544007EBDB3 /* Speak.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -307,6 +660,8 @@
 		4E782442269A19D8000A1ED4 /* Benchmarks */ = {
 			isa = PBXGroup;
 			children = (
+				4EA9B92829DD252A00C32E57 /* MachineLearning */,
+				4EBB222F2978181900F020BD /* Throughput */,
 				4E15B26826A0DCF1001BAB5A /* Sleep */,
 				4EE82921269B2A3200D88A0F /* Arrays */,
 				4E782443269A19E9000A1ED4 /* Concurrency */,
@@ -324,10 +679,117 @@
 			path = Concurrency;
 			sourceTree = "<group>";
 		};
+		4E82EF4B2A97889000834837 /* squeezenet */ = {
+			isa = PBXGroup;
+			children = (
+				4E82EF562A978A3600834837 /* new_squeezenet1_0.pt */,
+				4E82EF4C2A97889000834837 /* squeezenet1_0-b66bff10.pt */,
+			);
+			path = squeezenet;
+			sourceTree = "<group>";
+		};
+		4E9677702A961893007C51FA /* resnet */ = {
+			isa = PBXGroup;
+			children = (
+				4E9677712A961893007C51FA /* trace_model.py */,
+				4E9677722A961893007C51FA /* resnet_quantized.pt */,
+			);
+			path = resnet;
+			sourceTree = "<group>";
+		};
+		4EA9B92829DD252A00C32E57 /* MachineLearning */ = {
+			isa = PBXGroup;
+			children = (
+				562FEFFA2A85FD9700790864 /* Pytorch */,
+				4E13A52E2A3C572700FA439C /* BERT */,
+				4E4CFDCF2A0AC1500025E9ED /* ResNet50 */,
+				4E2AAAB82A079E7C006B4985 /* SqueezeNet */,
+				4E65AA7729E2AF0A0031A790 /* MobileNet */,
+				4EA9E04E29DD266300C32E57 /* MachineLearningBenchmark.swift */,
+				4E2AAAC32A0840B9006B4985 /* CoreMLVisionBenchmark.swift */,
+				4EE64CE62A0852B700A5AB71 /* TFLiteVisionBenchmark.swift */,
+				562FF0142A8600BC00790864 /* PyTorchVisionBenchmark.swift */,
+			);
+			path = MachineLearning;
+			sourceTree = "<group>";
+		};
+		4EA9B92929DD252A00C32E57 /* TFLite */ = {
+			isa = PBXGroup;
+			children = (
+				4EA9B92A29DD252A00C32E57 /* mobilenet_v2.tflite */,
+				4EA9B92B29DD252A00C32E57 /* mobilenet_v2_quant.tflite */,
+				4EA9B92C29DD252A00C32E57 /* efficientnet_lite3.tflite */,
+				4EA9B92D29DD252A00C32E57 /* mobilenet_v2_quant_metadata.tflite */,
+				4EA9B92E29DD252A00C32E57 /* efficientnet_lite1.tflite */,
+				4EA9B92F29DD252A00C32E57 /* efficientnet_lite4.tflite */,
+				4EA9B93029DD252A00C32E57 /* .python-version */,
+				4EA9B93129DD252A00C32E57 /* efficientnet_lite2.tflite */,
+				4EA9B93229DD252A00C32E57 /* mobilenet_v2_quant_default.tflite */,
+				4EA9B93329DD252A00C32E57 /* efficientnet_lite0.tflite */,
+			);
+			path = TFLite;
+			sourceTree = "<group>";
+		};
+		4EA9E04929DD266300C32E57 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				4EA9E04A29DD266300C32E57 /* models */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		4EA9E04A29DD266300C32E57 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4EA9E04B29DD266300C32E57 /* MobileNetV2_apple.mlmodel */,
+				4EA9E04C29DD266300C32E57 /* MobileNet.mlmodel */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		4EAB61C22A556FBD00BB0BF9 /* TTFLite */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB61C32A556FBD00BB0BF9 /* Constants.swift */,
+				4EAB61C42A556FBD00BB0BF9 /* BertQAHandler.swift */,
+				4EAB61C52A556FBD00BB0BF9 /* UnicodeScalarExtension.swift */,
+				4EAB61C62A556FBD00BB0BF9 /* contents_from_squad_dict_format.json */,
+				4EAB61C72A556FBD00BB0BF9 /* Result.swift */,
+				4EAB61C82A556FBD00BB0BF9 /* InputFeatures.swift */,
+				4EAB61C92A556FBD00BB0BF9 /* mobilebert_float_20191023.tflite */,
+				4EAB61CA2A556FBD00BB0BF9 /* FileLoader.swift */,
+				4EAB61CB2A556FBD00BB0BF9 /* Dataset.swift */,
+				4EAB61CC2A556FBD00BB0BF9 /* vocab.txt */,
+				4EAB61CD2A556FBD00BB0BF9 /* FullTokenizer.swift */,
+				4EAB61CE2A556FBD00BB0BF9 /* DataExtension.swift */,
+				4EAB61CF2A556FBD00BB0BF9 /* StringExtension.swift */,
+				4EAB61D02A556FBD00BB0BF9 /* ContentData.swift */,
+				4EAB61D12A556FBD00BB0BF9 /* WordpieceTokenizer.swift */,
+				4EAB61D22A556FBD00BB0BF9 /* BasicTokenizer.swift */,
+			);
+			path = TTFLite;
+			sourceTree = "<group>";
+		};
+		4EBB222F2978181900F020BD /* Throughput */ = {
+			isa = PBXGroup;
+			children = (
+				4EBB22302978183300F020BD /* ThroughputBenchmark.swift */,
+			);
+			path = Throughput;
+			sourceTree = "<group>";
+		};
 		4ECB09FE2680D55500158260 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4E8B9BC129BBEDB00024738E /* Labels.swift */,
 				4ECB0A0326821DD900158260 /* EnergyBenchmarksAsTests.swift */,
+				4E2A75F229AEAB11004BBAAF /* BenchmarksTest.swift */,
+				4E24DA2B2A9607E10043AB95 /* MachineLearningTests.swift */,
+				4E70AC7C29BBC81C00CC2F30 /* MobileNetTests.swift */,
+				4EE64CE82A08579600A5AB71 /* SqueezeNetTests.swift */,
+				4E4CFDE22A0AC65A0025E9ED /* ResNetTests.swift */,
+				4E2512E72A553DB300182A29 /* BertTests.swift */,
+				4EA0EBD22A8A5C1000DF9CC1 /* FirebaseResults.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -344,6 +806,49 @@
 			path = Arrays;
 			sourceTree = "<group>";
 		};
+		562FEFFA2A85FD9700790864 /* Pytorch */ = {
+			isa = PBXGroup;
+			children = (
+				562FF0012A85FF2700790864 /* ImageClassification */,
+				562FF0082A85FF2700790864 /* Predictor.swift */,
+				562FF0092A85FF2700790864 /* TorchBridge */,
+			);
+			path = Pytorch;
+			sourceTree = "<group>";
+		};
+		562FF0012A85FF2700790864 /* ImageClassification */ = {
+			isa = PBXGroup;
+			children = (
+				4E82EF4B2A97889000834837 /* squeezenet */,
+				4E9677702A961893007C51FA /* resnet */,
+				562FF0162A86036D00790864 /* UIImage+Helper.swift */,
+				562FF0022A85FF2700790864 /* ImagePredictor.swift */,
+				562FF0032A85FF2700790864 /* CVPixelBuffer+Helper.swift */,
+				562FF0042A85FF2700790864 /* mobilenet */,
+			);
+			path = ImageClassification;
+			sourceTree = "<group>";
+		};
+		562FF0042A85FF2700790864 /* mobilenet */ = {
+			isa = PBXGroup;
+			children = (
+				562FF0052A85FF2700790864 /* trace_model.py */,
+				562FF0062A85FF2700790864 /* words.txt */,
+				562FF0072A85FF2700790864 /* mobilenet_quantized.pt */,
+			);
+			path = mobilenet;
+			sourceTree = "<group>";
+		};
+		562FF0092A85FF2700790864 /* TorchBridge */ = {
+			isa = PBXGroup;
+			children = (
+				562FF00A2A85FF2700790864 /* TorchModule.mm */,
+				562FF00B2A85FF2700790864 /* TorchModule.h */,
+				562FF00C2A85FF2700790864 /* PyTorchDemo-Bridging-Header.h */,
+			);
+			path = TorchBridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -351,9 +856,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E2F56D3267E3687000ACBF7 /* Build configuration list for PBXNativeTarget "EnergyBenchmarks" */;
 			buildPhases = (
+				5CF9E2816414FD7707259BB4 /* [CP] Check Pods Manifest.lock */,
 				4E2F56A5267E3685000ACBF7 /* Sources */,
 				4E2F56A6267E3685000ACBF7 /* Frameworks */,
 				4E2F56A7267E3685000ACBF7 /* Resources */,
+				40EA71564E6987E67CCEE65A /* [CP] Embed Pods Frameworks */,
+				4E46B2A02A5EB971003F8853 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -361,9 +869,6 @@
 			);
 			name = EnergyBenchmarks;
 			packageProductDependencies = (
-				4E782440269A0C3A000A1ED4 /* DeviceKit */,
-				4E15B25626A08668001BAB5A /* FirebaseAuth */,
-				4E15B25826A08668001BAB5A /* FirebaseDatabase */,
 			);
 			productName = EnergyBenchmarks;
 			productReference = 4E2F56A9267E3685000ACBF7 /* EnergyBenchmarks.app */;
@@ -437,8 +942,6 @@
 			);
 			mainGroup = 4E2F56A0267E3685000ACBF7;
 			packageReferences = (
-				4E78243F269A0C3A000A1ED4 /* XCRemoteSwiftPackageReference "DeviceKit" */,
-				4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 4E2F56AA267E3685000ACBF7 /* Products */;
 			projectDirPath = "";
@@ -456,9 +959,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2A83892A079B6F006B4985 /* keras_mobilenet_v2_with_metadata.tflite in Resources */,
+				4E2AAAC02A07A2DE006B4985 /* squeezenet_1_metadata_1.tflite in Resources */,
+				4EAB61DC2A556FBD00BB0BF9 /* vocab.txt in Resources */,
+				4EA9E05E29DD266D00C32E57 /* mobilenet_v2.tflite in Resources */,
+				4E2AAAA52A079B91006B4985 /* keras_model.tflite in Resources */,
+				4EA9E05F29DD266D00C32E57 /* mobilenet_v2_quant.tflite in Resources */,
+				4E0E72E429DE28D700A67ECD /* tiny_imagenet_val.zip in Resources */,
+				4EA9E06329DD266D00C32E57 /* efficientnet_lite4.tflite in Resources */,
 				4E2F56B9267E3687000ACBF7 /* LaunchScreen.storyboard in Resources */,
+				4EA9E06029DD266D00C32E57 /* efficientnet_lite3.tflite in Resources */,
 				4E15B22C269F308F001BAB5A /* GoogleService-Info.plist in Resources */,
+				4E6879392A3C590000DAE274 /* bert-base-uncased-vocab.txt in Resources */,
+				4E82EF4D2A97889000834837 /* squeezenet1_0-b66bff10.pt in Resources */,
+				4EA9E06629DD266D00C32E57 /* mobilenet_v2_quant_default.tflite in Resources */,
+				4EA9E06529DD266D00C32E57 /* efficientnet_lite2.tflite in Resources */,
+				4EA9E06229DD266D00C32E57 /* efficientnet_lite1.tflite in Resources */,
+				4EA9E06429DD266D00C32E57 /* .python-version in Resources */,
+				4EA9E06729DD266D00C32E57 /* efficientnet_lite0.tflite in Resources */,
+				4E7827712A27576C0031B671 /* imagenet_val.zip in Resources */,
+				4E2A83902A079B6F006B4985 /* keras_mobilenet_v2.tflite in Resources */,
+				562FF0112A85FF2700790864 /* mobilenet_quantized.pt in Resources */,
+				4E9677742A961893007C51FA /* resnet_quantized.pt in Resources */,
+				4EE43A0029DEFBA20045E011 /* tree.jpg in Resources */,
+				4E82EF572A978A3600834837 /* new_squeezenet1_0.pt in Resources */,
+				4E4CFDE12A0AC38E0025E9ED /* keras_resnet50_with_metadata.tflite in Resources */,
 				4E2F56B6267E3687000ACBF7 /* Assets.xcassets in Resources */,
+				562FF0102A85FF2700790864 /* words.txt in Resources */,
+				4EAB61D62A556FBD00BB0BF9 /* contents_from_squad_dict_format.json in Resources */,
+				4EA9E06129DD266D00C32E57 /* mobilenet_v2_quant_metadata.tflite in Resources */,
+				4EAB61D92A556FBD00BB0BF9 /* mobilebert_float_20191023.tflite in Resources */,
 				4E2F56B4267E3685000ACBF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,42 +1009,163 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40EA71564E6987E67CCEE65A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnergyBenchmarks/Pods-EnergyBenchmarks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnergyBenchmarks/Pods-EnergyBenchmarks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnergyBenchmarks/Pods-EnergyBenchmarks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E46B2A02A5EB971003F8853 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		5CF9E2816414FD7707259BB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnergyBenchmarks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4E2F56A5267E3685000ACBF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2AAAA92A079B91006B4985 /* ssd_mobilenet_v2_2.mlpackage in Sources */,
+				4EAB61D52A556FBD00BB0BF9 /* UnicodeScalarExtension.swift in Sources */,
+				4EE64CEB2A0859FA00A5AB71 /* SqueezeNetTFLite.swift in Sources */,
 				4E15B230269F3A9B001BAB5A /* BenchmarksSelectionViewController.swift in Sources */,
+				4EA9077A29DD267D00C32E57 /* MobileNetV2_apple.mlmodel in Sources */,
 				4EE82923269B2A8C00D88A0F /* ArrayBenchmark.swift in Sources */,
+				4EAB61DB2A556FBD00BB0BF9 /* Dataset.swift in Sources */,
 				4E15B26126A0C4AE001BAB5A /* ArrayAddLast.swift in Sources */,
+				4E9677782A964884007C51FA /* Resnet50TorchGPU.swift in Sources */,
 				4E15B26326A0C58E001BAB5A /* ArrayAddFirst.swift in Sources */,
 				4E15B26C26A1C367001BAB5A /* SleepTrackingBenchmark.swift in Sources */,
 				4E63625426BF16B60086239F /* IntUtils.swift in Sources */,
-				4E2F56B1267E3685000ACBF7 /* ViewController.swift in Sources */,
+				4EAB61D82A556FBD00BB0BF9 /* InputFeatures.swift in Sources */,
+				4EAB61D32A556FBD00BB0BF9 /* Constants.swift in Sources */,
+				4E2AAAC42A0840B9006B4985 /* CoreMLVisionBenchmark.swift in Sources */,
+				4E68792B2A3C57EC00DAE274 /* BERT.swift in Sources */,
+				4E2F56B1267E3685000ACBF7 /* HomeViewController.swift in Sources */,
+				4E82EF4F2A9788B000834837 /* SqueezeNetTorch.swift in Sources */,
+				4EAB61DF2A556FBD00BB0BF9 /* StringExtension.swift in Sources */,
+				4E2512E62A553A0A00182A29 /* BertCoreML.swift in Sources */,
+				4E688D2129DD59B900DE1ED8 /* DatasetTinyImageNet.swift in Sources */,
 				4E78244B269A2133000A1ED4 /* ConcurrencyOperationQueue.swift in Sources */,
+				4EAB61E12A556FBD00BB0BF9 /* WordpieceTokenizer.swift in Sources */,
 				4E15B241269F58FB001BAB5A /* IntFormatter.swift in Sources */,
+				4E2AAAC22A07A309006B4985 /* SqueezeNetCoreML.swift in Sources */,
+				4E6879372A3C58CA00DAE274 /* BERTVocabulary.swift in Sources */,
+				4E9677762A9618BC007C51FA /* ResNet50Torch.swift in Sources */,
+				4E2AAABA2A079E7C006B4985 /* SqueezeNetBenchmark.swift in Sources */,
 				4E15B24A269F80A8001BAB5A /* ResultsViewController.swift in Sources */,
+				4E65AA7F29E2B9460031A790 /* MobileNetV2TFLite_internal.swift in Sources */,
+				4E4CFDD92A0AC1A90025E9ED /* ResNet50TFLite_internal.swift in Sources */,
 				4E2F56AD267E3685000ACBF7 /* AppDelegate.swift in Sources */,
+				4EA9077B29DD267D00C32E57 /* MobileNet.mlmodel in Sources */,
 				4E78243E2699EC67000A1ED4 /* Log.swift in Sources */,
+				4E4CFDDB2A0AC1A90025E9ED /* ResNet50TF2TFLite.swift in Sources */,
 				4E782445269A1A49000A1ED4 /* ConcurrencyBenchmark.swift in Sources */,
+				562FF00E2A85FF2700790864 /* CVPixelBuffer+Helper.swift in Sources */,
+				4E6879332A3C586500DAE274 /* TokenizedString.swift in Sources */,
+				562FF0172A86036D00790864 /* UIImage+Helper.swift in Sources */,
 				4E782449269A1AD9000A1ED4 /* Benchmark.swift in Sources */,
+				4E65AA7B29E2B1F20031A790 /* MobileNetV2TFLite.swift in Sources */,
+				4EAB61DE2A556FBD00BB0BF9 /* DataExtension.swift in Sources */,
+				4E65AA7D29E2B2770031A790 /* MobileNetV2TF2ML.swift in Sources */,
+				4E3C08292A8A9F7D004B04DC /* MobileNetV2TorchGPU.swift in Sources */,
+				4E4CFDD72A0AC1A90025E9ED /* ResNet50CoreML.swift in Sources */,
 				4E15B24D269F88E8001BAB5A /* Statistics.swift in Sources */,
+				4E46B29F2A5EB44C003F8853 /* MobileNetV2Torch.swift in Sources */,
+				4E4CFDD82A0AC1A90025E9ED /* ResNet50TF2ML.swift in Sources */,
 				4E78243D2699EC63000A1ED4 /* BenchmarkResult.swift in Sources */,
 				4E15B227269E200B001BAB5A /* BenchmarkExecutionSuite.swift in Sources */,
+				4EE64CE72A0852B700A5AB71 /* TFLiteVisionBenchmark.swift in Sources */,
+				4EAB61EA2A55715300BB0BF9 /* BertTFLite.swift in Sources */,
 				4E15B26526A0C623001BAB5A /* ArrayRemoveLast.swift in Sources */,
 				4EE82920269B22A100D88A0F /* BenchmarkReport.swift in Sources */,
+				562FF0122A85FF2700790864 /* Predictor.swift in Sources */,
+				562FF0152A8600BC00790864 /* PyTorchVisionBenchmark.swift in Sources */,
+				4EAB61DA2A556FBD00BB0BF9 /* FileLoader.swift in Sources */,
 				4E15B26726A0C630001BAB5A /* ArrayRemoveFirst.swift in Sources */,
 				4E78244D269A23D6000A1ED4 /* BenchmarkExecution.swift in Sources */,
+				4EA9077D29DD267D00C32E57 /* MachineLearningBenchmark.swift in Sources */,
 				4E78243A2699EC56000A1ED4 /* BatteryMonitor.swift in Sources */,
+				4E6879352A3C588D00DAE274 /* BERTOutput.swift in Sources */,
+				4EAB61D72A556FBD00BB0BF9 /* Result.swift in Sources */,
+				4EA9077C29DD267D00C32E57 /* MobileNetBenchmark.swift in Sources */,
+				4E6879312A3C584600DAE274 /* BERTInput.swift in Sources */,
+				4EDA44BD29A58544007EBDB3 /* Speak.swift in Sources */,
 				4E2F56AF267E3685000ACBF7 /* SceneDelegate.swift in Sources */,
 				4E15B22E269F31E5001BAB5A /* ReportService.swift in Sources */,
 				4E78243B2699EC5A000A1ED4 /* BatteryState+Extension.swift in Sources */,
 				4E782447269A1A8F000A1ED4 /* ConcurrencySequential.swift in Sources */,
 				4E15B23F269F51FC001BAB5A /* BenchmarkExecutionViewController.swift in Sources */,
+				4E4CFDDF2A0AC3050025E9ED /* tf_to_coreml_resnet50.mlpackage in Sources */,
+				562FF0132A85FF2700790864 /* TorchModule.mm in Sources */,
+				4E4CFDD62A0AC1A90025E9ED /* ResNet50Benchmark.swift in Sources */,
 				4E7824392699EC52000A1ED4 /* SmartSwitchWebhook.swift in Sources */,
 				4E78243C2699EC5F000A1ED4 /* UIDevice+modelName.swift in Sources */,
 				4E15B243269F6E40001BAB5A /* ResultsSelectionViewController.swift in Sources */,
+				4E65AA7929E2AF680031A790 /* MobileNetV2CoreML.swift in Sources */,
+				4EAB61D42A556FBD00BB0BF9 /* BertQAHandler.swift in Sources */,
+				4EAB61E02A556FBD00BB0BF9 /* ContentData.swift in Sources */,
+				4EAB61E22A556FBD00BB0BF9 /* BasicTokenizer.swift in Sources */,
+				4EAB61E62A55709700BB0BF9 /* BertBenchmark.swift in Sources */,
+				4EDC56A729F2E9B0008F0780 /* MobileNetV2TF2TFLite.swift in Sources */,
+				4E68792D2A3C57FE00DAE274 /* BERTQAFP16.mlmodel in Sources */,
+				4EBB22312978183300F020BD /* ThroughputBenchmark.swift in Sources */,
+				4E4CFDDA2A0AC1A90025E9ED /* ResNet50TFLite.swift in Sources */,
+				4E2AAABF2A07A2DE006B4985 /* SqueezeNet_apple.mlmodel in Sources */,
+				562FF00D2A85FF2700790864 /* ImagePredictor.swift in Sources */,
+				4E4CFDDE2A0AC3050025E9ED /* Resnet50_apple.mlmodel in Sources */,
 				4E7824382699EBE9000A1ED4 /* PowerControl.swift in Sources */,
+				4EAB61DD2A556FBD00BB0BF9 /* FullTokenizer.swift in Sources */,
 				4E15B26A26A0DD00001BAB5A /* SleepBenchmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +1175,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ECB0A0426821DD900158260 /* EnergyBenchmarksAsTests.swift in Sources */,
+				4EE64CE92A08579600A5AB71 /* SqueezeNetTests.swift in Sources */,
+				4E2512E82A553DB300182A29 /* BertTests.swift in Sources */,
+				4EA0EBD32A8A5C1000DF9CC1 /* FirebaseResults.swift in Sources */,
+				4E24DA2C2A9607E10043AB95 /* MachineLearningTests.swift in Sources */,
+				4E70AC7D29BBC81C00CC2F30 /* MobileNetTests.swift in Sources */,
+				4E8B9BC229BBEDB00024738E /* Labels.swift in Sources */,
+				4E4CFDE32A0AC65A0025E9ED /* ResNetTests.swift in Sources */,
+				4E2A75F329AEAB11004BBAAF /* BenchmarksTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +1269,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -621,7 +1280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -676,7 +1335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -688,18 +1347,26 @@
 		};
 		4E2F56D4267E3687000ACBF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DDCF1D79B57295A7AF0A4C4 /* Pods-EnergyBenchmarks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EnergyBenchmarks/EnergyBenchmarks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44G8CV69SN;
 				INFOPLIST_FILE = EnergyBenchmarks/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitormfj.EnergyBenchmarks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EnergyBenchmarks/src/Benchmarks/MachineLearning/Pytorch/TorchBridge/PyTorchDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -707,18 +1374,26 @@
 		};
 		4E2F56D5267E3687000ACBF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D208CD8BD29E138ECD3A3A54 /* Pods-EnergyBenchmarks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EnergyBenchmarks/EnergyBenchmarks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44G8CV69SN;
 				INFOPLIST_FILE = EnergyBenchmarks/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitormfj.EnergyBenchmarks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EnergyBenchmarks/src/Benchmarks/MachineLearning/Pytorch/TorchBridge/PyTorchDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -732,6 +1407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44G8CV69SN;
 				INFOPLIST_FILE = EnergyBenchmarksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -753,6 +1429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44G8CV69SN;
 				INFOPLIST_FILE = EnergyBenchmarksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -846,43 +1523,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.3.1;
-			};
-		};
-		4E78243F269A0C3A000A1ED4 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devicekit/DeviceKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.4.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4E15B25626A08668001BAB5A /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		4E15B25826A08668001BAB5A /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4E15B25526A08668001BAB5A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		4E782440269A0C3A000A1ED4 /* DeviceKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4E78243F269A0C3A000A1ED4 /* XCRemoteSwiftPackageReference "DeviceKit" */;
-			productName = DeviceKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E2F56A1267E3685000ACBF7 /* Project object */;
 }

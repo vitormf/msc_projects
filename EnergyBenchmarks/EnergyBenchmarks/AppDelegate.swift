@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIScreen.main.brightness = 0
+        setupInitialState()
         ReportService.setup()
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now()+10) {
+//            fatalError("Crash was triggered")
+//        }
         return true
     }
 
@@ -36,5 +42,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func setupInitialState() {
+#if targetEnvironment(simulator)
+        let isSimulator = true
+#else
+        let isSimulator = false
+#endif
+
+        SmartSwitchWebhook.enabled = !isSimulator
+        ReportService.enabled = !isSimulator
+        PowerControl.ignoreCharger = isSimulator
+        switch(Device.current) {
+        case .iPhone8Plus:
+            SmartSwitchWebhook.charger = 2
+        default:
+            SmartSwitchWebhook.charger = 1
+        }
+    }
 }
 

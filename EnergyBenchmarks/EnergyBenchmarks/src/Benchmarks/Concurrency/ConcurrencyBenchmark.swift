@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ConcurrencyBenchmark: Benchmark {}
+protocol ConcurrencyBenchmark: BenchmarkSynchronous {}
 
 extension ConcurrencyBenchmark {
     var CONCURRENCY_COUNT_GOAL:UInt64 { 10_000_000_000 }

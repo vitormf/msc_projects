@@ -18,7 +18,7 @@ let allArrayBenchmarks:[Benchmark] = [
     SwiftArrayRemoveFirst()
 ]
 
-protocol ArrayBenchmark: Benchmark {
+protocol ArrayBenchmark: BenchmarkSynchronous {
     var GOAL: UInt64 { get }
     var MAX_ARRAY_SIZE: UInt64 { get }
     var subidentifier: String { get }

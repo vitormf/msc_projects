@@ -7,7 +7,7 @@
 
 import UIKit
 
-typealias BatteryMonitorReport = (Float, UIDevice.BatteryState) -> Void
+typealias BatteryMonitorReport = (Float, UIDevice.BatteryState, Int) -> Void
 
 class BatteryMonitor {
     
@@ -20,23 +20,41 @@ class BatteryMonitor {
     var state:UIDevice.BatteryState {
         UIDevice.current.batteryState
     }
-    
-    var report:BatteryMonitorReport?
+
+    private static var listenerId = 0
+    private var listeners = [Int:BatteryMonitorReport]()
+
+    @discardableResult
+    func addListener(listener:@escaping BatteryMonitorReport) -> Int {
+        let id = BatteryMonitor.listenerId
+        BatteryMonitor.listenerId += 1
+        listeners[id] = listener
+        return id
+    }
+
+    func removeListener(listenerId:Int) {
+        listeners[listenerId] = nil
+    }
     
     @objc
     func batteryLevelDidChange(notification: NSNotification) {
         logBattery()
-        report?(level, state)
+        for k in listeners.keys {
+            listeners[k]?(level, state, k)
+        }
     }
 
     @objc
     func batteryStateDidChange(notification: NSNotification) {
         logBattery()
-        report?(level, state)
+        for k in listeners.keys {
+            listeners[k]?(level, state, k)
+        }
     }
     
     private func logBattery() {
         eblog?("batteryDidChange: \(state.string) \(level)")
+//        ebspeak("battery \(state.string) \(Int(100*level))%")
     }
     
     func startMonitoring() {
