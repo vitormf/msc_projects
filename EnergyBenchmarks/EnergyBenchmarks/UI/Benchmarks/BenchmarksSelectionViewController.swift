@@ -7,6 +7,12 @@
 
 import UIKit
 
+//let allBenchmarks:[Benchmark] = allArrayBenchmarks + allConcurrencyBenchmarks + allSleepBenchmarks + allMachineLearningBenchmarks + allThroughputBenchmarks
+//let allBenchmarks:[Benchmark] = allMobileNetBenchmarks + allSqueezeNetBenchmarks + allResNetBenchmarks
+let allBenchmarks:[Benchmark] = allSqueezeNetBenchmarks
+//let allBenchmarks:[Benchmark] = allBertBenchmarks
+
+
 class BenchmarksSelectionViewController: UIViewController {
     
     var availableBenchmarks:[Benchmark] = allBenchmarks
@@ -18,6 +24,7 @@ class BenchmarksSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        selectedBenchmarks = allMachineLearningBenchmarks
         reloadData()
     }
     

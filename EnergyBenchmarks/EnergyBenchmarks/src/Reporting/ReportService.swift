@@ -6,14 +6,17 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseDatabase
+import FirebaseCore
+import FirebaseAuth
 
 class ReportService {
     
+    static var enabled = true
     private static let instance = ReportService()
-    
+
     private let db = Database.database().reference()
-    
+
     static func setup() {
         FirebaseApp.configure()
         signIn()
@@ -27,6 +30,9 @@ class ReportService {
     }
     
     static func report(result:BenchmarkResult) {
+        if !enabled {
+            return
+        }
         instance.db
             .child("BatteryUsageBenchmarks")
             .child(sanitize(result.category))
@@ -45,7 +51,7 @@ class ReportService {
                 "model": result.model,
                 "name": result.name,
                 "cores": result.cores,
-            ])
+            ] as [String : Any])
         
     }
     

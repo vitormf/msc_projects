@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SleepBenchmark: Benchmark {
+protocol SleepBenchmark: BenchmarkSynchronous {
     var sleepTime:TimeInterval { get }
 }
 

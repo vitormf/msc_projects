@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class ResultsViewController: UIViewController {
     
@@ -65,19 +64,23 @@ class ResultsViewController: UIViewController {
     
     private func durationResult(_ value:TimeInterval) -> String {
         let value = value.isNaN ? 0.0 : value
-        let mins = Int(value)/60
+        let hours = Int(value)/3600
+        let mins = (Int(value)/60)%60
         let secs = Int(value)%60
-        let microsecs = Int(value*1_000_000) % 1_000_000
+//        let microsecs = Int(value*1_000_000) % 1_000_000
         var result = ""
+        if (hours > 0) {
+            result += "\(hours)h "
+        }
         if (mins > 0) {
             result += "\(mins)m "
         }
         if secs > 0 {
             result += "\(secs)s "
         }
-        if mins == 0 {
-            result += "\(microsecs)µs"
-        }
+//        if mins == 0 {
+//            result += "\(microsecs)µs"
+//        }
         return result
     }
     
@@ -96,7 +99,7 @@ extension ResultsViewController: UITableViewDataSource {
         
         let result = results[indexPath.row]
         
-        cell.textLabel?.text = "Battery \(result.battery) - Duration \(result.duration)"
+        cell.textLabel?.text = "Battery \(result.battery) - Duration \(durationResult(result.duration))"
         
         return cell
     }

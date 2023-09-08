@@ -6,10 +6,10 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseDatabase
 
 
-class ResultsSelectionViewController: ViewController {
+class ResultsSelectionViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +20,7 @@ class ResultsSelectionViewController: ViewController {
     
     var currentStep = ResultSelectionSteps.category
     var data = [String]()
-    var ref:DatabaseReference = ReportService.results()
+    var ref:DatabaseReference!
     
     var category:String = ""
     var identifier:String = ""
@@ -30,12 +30,15 @@ class ResultsSelectionViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reloadData()
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            self?.ref = ReportService.results()
+            self?.reloadData()
+        }
     }
     
     func reloadData() {
         ref.getData { [weak self] error, snapshot in
-            guard let value = snapshot.value as? [String:Any] else { return }
+            guard let value = snapshot?.value as? [String:Any] else { return }
             self?.reloadTableView(Array(value.keys).sorted())
         }
     }
@@ -100,7 +103,7 @@ class ResultsSelectionViewController: ViewController {
         ref.getData { [weak self] error, snapshot in
             guard let self = self else { return }
             
-            if let snapValue = snapshot.value as? NSDictionary,
+            if let snapValue = snapshot?.value as? NSDictionary,
                let resultValues = snapValue.allValues as? [NSDictionary] {
                 let results = resultValues.map { rvalue in ReportService.result(value: rvalue) }
                 self.results = results

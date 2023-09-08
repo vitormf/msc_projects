@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SleepTrackingBenchmark: Benchmark {
+class SleepTrackingBenchmark: BenchmarkSynchronous {
     var category: String = "SleepTracking"
     
     var identifier: String = "Total"
@@ -22,11 +22,12 @@ class SleepTrackingBenchmark: Benchmark {
         startTime = NSDate().timeIntervalSince1970
         track(battery: BatteryMonitor.shared.level)
         let semaphore = DispatchSemaphore(value: 0)
-        BatteryMonitor.shared.report = { level, state in
-            
+        BatteryMonitor.shared.addListener { level, state, id in
+
             self.track(battery: level)
             if level == 0.01 {
                 semaphore.signal()
+                BatteryMonitor.shared.removeListener(listenerId: id)
             }
         }
         semaphore.wait()
