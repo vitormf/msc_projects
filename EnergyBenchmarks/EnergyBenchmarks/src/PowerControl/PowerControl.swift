@@ -16,7 +16,7 @@ class PowerControl {
     static let shared = PowerControl()
 
     static let START_BATTERY_LEVEL:Float = 0.80;
-    static let START_BATTERY_LEVEL_MARGIN:Float = 0.81;
+    static let START_BATTERY_LEVEL_MARGIN:Float = 0.83;
 
     static let TIMEOUT:TimeInterval = 10
     
@@ -141,7 +141,7 @@ class PowerControl {
                     count = (count+1)%1_000
                     if (count == 0) {
                         DispatchQueue.main.async {
-                            eblog?("discharging")
+                            eblog?("discharging " + String(UIDevice.current.batteryLevel))
                         }
                     }
                     let _ = benchmark.classify(0, image)

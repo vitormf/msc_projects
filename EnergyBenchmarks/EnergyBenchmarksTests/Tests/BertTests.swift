@@ -9,72 +9,73 @@ import XCTest
 @testable import EnergyBenchmarks
 
 class BertTests: XCTestCase {
-    let coreML = ResNet50CoreML(1)
-//    let tfLite = ResNet50TFLite(1)
-//    let tf2ml = ResNet50TF2ML(1)
-//    let tf2tfLite = ResNet50TF2TFLite(1)
-//    let tfLiteInternal = SqueezeNetTFLite_internal(1)
+    var bertDataset = BertDataset()
 
     override func setUp() {
-        coreML.setup()
+        bertDataset.parse()
     }
 
     func testAccuracy() {
-        let total = TINY_IMAGENET_COUNT
-        var coreMLCount = 0
-        var tfLiteCount = 0
-        var tf2mlCount = 0
-        var tf2tfLiteCount = 0
-
-        for i:UInt64 in 0...total {
-            autoreleasepool {
-                if (resNetTest(benchmark: coreML, index: i)) {
-                    coreMLCount += 1
+        let coreML = BERT()
+        let tfLite = try! BertQAHandler(threadCount: 4)
+        
+        var questionsCount = 0
+        var coreMLMatch = 0
+        var tfLiteMatch = 0
+        
+        let export = NSMutableArray()
+        
+        let start = CFAbsoluteTimeGetCurrent()
+        
+        for (i,text) in bertDataset.texts.enumerated() {
+            if i == 200 {
+                break;
+            }
+//            print("================")
+//            print(text.context)
+//            print("")
+            let exportText = NSMutableDictionary()
+            exportText["context"] = text.context
+            
+            let exportQuestions = NSMutableArray()
+            for question in text.questions {
+                questionsCount += 1
+                let coreMLAnswer = coreML.findAnswer(for: question.question, in: text.context)
+                let tfLiteAnswer = tfLite.run(query: question.question, content: text.context)? .answer.text.value
+                
+                let exportQuestion = NSMutableDictionary()
+                exportQuestion["question"] = question.question
+                exportQuestion["coreMLAnswer"] = coreMLAnswer
+                exportQuestion["tfLiteAnswer"] = tfLiteAnswer
+                exportQuestion["expected"] = question.answers
+                exportQuestions.add(exportQuestion)
+                
+                if question.answers.contains(String(coreMLAnswer)) {
+                    coreMLMatch += 1
                 }
-//                if (resNetTest(benchmark: tfLite, index: i)) {
-//                    tfLiteCount += 1
-//                }
-//                if (resNetTest(benchmark: tf2ml, index: i)) {
-//                    tf2mlCount += 1
-//                }
-//                if (resNetTest(benchmark: tf2tfLite, index: i)) {
-//                    tf2tfLiteCount += 1
-//                }
-//                print("\(i)/\(total) - \(Double(coreMLCount)/Double(i)) / \(Double(tfLiteCount)/Double(i)) / \(Double(tf2mlCount)/Double(i)) / \(Double(tf2tfLiteCount)/Double(i))")
+                if let tfLiteAnswer = tfLiteAnswer, question.answers.contains(tfLiteAnswer) {
+                    tfLiteMatch += 1
+                }
+                
+//                print(question.question)
+//                print("coreML: \(coreMLAnswer)")
+//                print("tfLite: \(tfLiteAnswer)")
+//                print("expected: \(question.answers)")
+//                print("")
             }
-        }
-        print("#######################\n coreML average: \(Double(coreMLCount)/Double(total))")
-        print("#######################\n tfLite average: \(Double(tfLiteCount)/Double(total))")
-        print("#######################\n tf2ml average: \(Double(tf2mlCount)/Double(total))")
-        print("#######################\n tf2tfLite average: \(Double(tf2tfLiteCount)/Double(total))")
+            
+            exportText["questions"] = exportQuestions
+            export.add(exportText)
+            
+            print("\(i)/\(bertDataset.texts.count) - Time: \(Int(CFAbsoluteTimeGetCurrent() - start)) - coreML: \(coreMLMatch)/\(questionsCount) - tfLite: \(tfLiteMatch)/\(questionsCount)")
 
+        }
+
+        
+        print("questionsCount: \(questionsCount)")
+        let jsonData = try! JSONSerialization.data(withJSONObject: export, options: .prettyPrinted)
+        try! jsonData.write(to: URL(fileURLWithPath: "/Users/vitor/Desktop/bert_accuracies.json"))
     }
 
-    func resNetTest(benchmark:ResNet50Benchmark,index:UInt64) -> Bool {
-        let expectation = XCTestExpectation()
-        var found = false
-
-        let image = benchmark.imagePreLoaded(UInt64(index))
-        benchmark.predict(thread:0, image: image) { predictions in
-//            print("\(type(of: benchmark)) - \(ImageLabels.tinyImageNetLabels[Int(index)]) : \(predictions)")
-//            let label = ImageLabels.tinyImageNetLabels[Int(index)]
-            let label = ImageLabels.imageNetLabels[Int(index)]
-            found = self.matches(predictions: predictions, labelsString: label)
-            expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: 10)
-        return found
-    }
-
-    func matches(predictions:[String], labelsString:String) -> Bool {
-        let labels = labelsString.split(separator: ",").map { s in
-            String(s).trimmingCharacters(in: .whitespacesAndNewlines)
-        }
-        for prediction in predictions {
-            if labels.contains(prediction) {
-                return true
-            }
-        }
-        return false
-    }
+    
 }

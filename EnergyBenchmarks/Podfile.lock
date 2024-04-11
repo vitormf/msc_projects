@@ -72,6 +72,11 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - onnxruntime-c (1.15.1)
+  - onnxruntime-objc (1.15.1):
+    - onnxruntime-objc/Core (= 1.15.1)
+  - onnxruntime-objc/Core (1.15.1):
+    - onnxruntime-c (= 1.15.1)
   - PromisesObjC (2.3.1)
   - PromisesSwift (2.3.1):
     - PromisesObjC (= 2.3.1)
@@ -91,6 +96,7 @@ DEPENDENCIES:
   - FirebaseCrashlytics (= 10.13.0)
   - FirebaseDatabase (= 10.13.0)
   - LibTorch (= 1.13.0.1)
+  - onnxruntime-objc
   - SSZipArchive (= 2.5.4)
   - TensorFlowLiteSwift (= 2.13.0)
   - TensorFlowLiteTaskVision (= 0.4.3)
@@ -113,6 +119,8 @@ SPEC REPOS:
     - leveldb-library
     - LibTorch
     - nanopb
+    - onnxruntime-c
+    - onnxruntime-objc
     - PromisesObjC
     - PromisesSwift
     - SSZipArchive
@@ -137,6 +145,8 @@ SPEC CHECKSUMS:
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   LibTorch: 8abfa5fc9d146230b31065a29b0502e1104956ea
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  onnxruntime-c: ebdcfd8650bcbd10121c125262f99dea681b92a3
+  onnxruntime-objc: ae7acec7a3d03eaf072d340afed7a35635c1c2a6
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   PromisesSwift: 28dca69a9c40779916ac2d6985a0192a5cb4a265
   SSZipArchive: 285b618a158ebc421039c22db5b77d345c7c03db
@@ -144,6 +154,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteSwift: 1d8320fbf292054eb50ef0b347a4b17a92b49731
   TensorFlowLiteTaskVision: 125d5b49d325ba2cf3938454da5f74a1cbfe0552
 
-PODFILE CHECKSUM: b45bbf9d005b142fea94314ad90fc634916e5f83
+PODFILE CHECKSUM: 7475c361f9b1c7a8d47db83f6b94478eb5cbce29
 
 COCOAPODS: 1.12.1

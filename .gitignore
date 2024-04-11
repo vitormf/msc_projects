@@ -64,3 +64,8 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 EnergyBenchmarks/EnergyBenchmarks/src/Benchmarks/MachineLearning/_Datasets
+EnergyBenchmarks/EnergyBenchmarks/src/Benchmarks/MachineLearning/MobileNet/Datasets
+EnergyBenchmarks/EnergyBenchmarks/src/Benchmarks/MachineLearning/MobileNet/Tensorflow/tiny_imagenet_val
+EnergyBenchmarks/Pods
+pretty.json
+**/__pycache__

@@ -7,11 +7,28 @@
 
 import UIKit
 
-//let allBenchmarks:[Benchmark] = allArrayBenchmarks + allConcurrencyBenchmarks + allSleepBenchmarks + allMachineLearningBenchmarks + allThroughputBenchmarks
-//let allBenchmarks:[Benchmark] = allMobileNetBenchmarks + allSqueezeNetBenchmarks + allResNetBenchmarks
-let allBenchmarks:[Benchmark] = allSqueezeNetBenchmarks
-//let allBenchmarks:[Benchmark] = allBertBenchmarks
 
+fileprivate let mobilenet = false
+fileprivate let resnet = true
+fileprivate let bert = false
+
+fileprivate let pyTorch = true
+fileprivate let onlyPytorch = true
+
+fileprivate func filterBenchmarks() -> [Benchmark] {
+    var benchmarks = [Benchmark]()
+    if (mobilenet) { benchmarks.append(contentsOf: allMobileNetBenchmarks) }
+    if (resnet) { benchmarks.append(contentsOf: allResNetBenchmarks) }
+    if (bert) { benchmarks.append(contentsOf: allBertBenchmarks) }
+    return benchmarks
+        .filter { b in !(b is  PyTorchVisionBenchmark && !pyTorch) }
+        .filter { b in !(!(b is  PyTorchVisionBenchmark) && onlyPytorch)  }
+}
+//let allBenchmarks:[Benchmark] = allArrayBenchmarks + allConcurrencyBenchmarks + allSleepBenchmarks + allMachineLearningBenchmarks + allThroughputBenchmarks
+//let allBenchmarks:[Benchmark] = allMobileNetBenchmarks
+let allBenchmarks:[Benchmark] = filterBenchmarks()
+
+let isTestingPyTorch = allBenchmarks.contains { b in b is PyTorchVisionBenchmark }
 
 class BenchmarksSelectionViewController: UIViewController {
     

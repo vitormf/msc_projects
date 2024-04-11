@@ -16,5 +16,6 @@ target 'EnergyBenchmarks' do
   pod 'LibTorch', '1.13.0.1'
   # pod 'LibTorch-Lite', '1.13.0.1'
   #  pod 'LibTorch-Lite-Nightly', '1.14.0.20221109'
+  pod 'onnxruntime-objc'
 
 end
